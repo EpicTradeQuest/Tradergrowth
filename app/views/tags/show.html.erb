@@ -1,0 +1,12 @@
+<h1><%= @tag.name %></h1>
+<h2><%= @pipresult %> pips with these tags.</h2>
+
+<% @trades.each do |trade| %>
+  <tr>
+    <td><%= image_tag trade.screenshot.url(:medium) %></td>
+    <td><%= trade.result %></td>
+    <td><%= trade.description %></td>
+    <td><%= trade.tag_list %></td>
+  </tr>
+
+<% end %>
