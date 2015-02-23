@@ -1,0 +1,23 @@
+#pin_show.row
+    .col-md-8.col-md-offset-2
+        .panel.panel-default
+            .panel-heading.pin_image
+                = image_tag @trade.screenshot.url
+            .panel-body
+                %h1
+                    = @trade.result
+                    pips
+                %h2 Trade Description
+                %p.description= @trade.description
+                %h2 Tags
+                - @trade.tags.each do |tag|
+                    %p= link_to tag, tag_path(tag)
+            .panel-footer
+                .row
+                    .col-md-6
+                        %p.user
+                            Submitted by x
+                    .col-md-6
+                        = link_to 'Back', root_path, class: "btn btn-default"
+                        = link_to 'Edit', edit_trade_path(@trade), class: "btn btn-default"
+                        = link_to 'Delete', trade_path, method: :Delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
