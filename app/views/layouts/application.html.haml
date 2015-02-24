@@ -2,14 +2,16 @@
 %html
 %head
     %title Tradergrowth
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
+    = csrf_meta_tag
 %body
     %nav.navbar.navbar-default
         .container
             .navbar-brand= link_to "tradergrowth", root_path
             %ul.nav.navbar-nav.navbar-right
+                %li= link_to 'New Trade', new_trade_path
                 %li= link_to "Sign Up",  root_path
                 %li= link_to "Login",  root_path
 

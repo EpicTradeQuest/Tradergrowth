@@ -6,6 +6,7 @@
     %ul
       - @pin.errors.full_messages.each do |msg|
         %li = msg
+
   .form-group
     = f.input :screenshot, input_html: { class: 'form-control' }
 
@@ -16,6 +17,6 @@
     = f.input :description, input_html: { class: 'form-control' }
 
   .form-group
-    = f.input :tag_list, :value => @trade.tag_list.to_s
+    = f.input :tag_list, :value => @trade.tag_list.to_s, input_html: { class: 'form-control' }
 
-  = f.button :submit, class: "btn btn-primary"
+  = f.button :submit, class: "btn btn-danger"

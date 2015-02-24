@@ -1,7 +1,9 @@
+#form.horizontal
+  = render 'form_index'
 #pins.transitions-enabled
   -@trades.each do |trade|
     .box.panel.panel-default
       = link_to (image_tag trade.screenshot.url), trade
-      %h2= link_to trade.result, trade
+      %h2= "#{trade.result} pips"
+      %h3= "Tags:"
       %p= trade.tag_list
-  = link_to 'New Trade', new_trade_path

@@ -4,6 +4,7 @@ class TradesController < ApplicationController
   # GET /trades
   # GET /trades.json
   def index
+    @trade = Trade.new
     @trades = Trade.all
   end
 
@@ -28,10 +29,10 @@ class TradesController < ApplicationController
 
     respond_to do |format|
       if @trade.save
-        format.html { redirect_to @trade, notice: 'Trade was successfully created.' }
+        format.html { redirect_to action: 'index', notice: 'Trade was successfully created.' }
         format.json { render :show, status: :created, location: @trade }
       else
-        format.html { render :new }
+        format.html { render action: 'index' }
         format.json { render json: @trade.errors, status: :unprocessable_entity }
       end
     end

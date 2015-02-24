@@ -37,9 +37,24 @@ nav {
         }
     }
 }
+.form_box {
+    margin: 20px auto;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+    border-radius: 7px;
+    text-align: center;
+    background-color: white;
+    label {
+        margin: 10px;
+    }
+    .btn {
+        margin-left: 20px;
+    }
+}
 
 #pins {
-  margin: 0 auto;
+  margin: 10px auto;
   width: 100%;
   .box {
       margin: 10px;
@@ -51,10 +66,15 @@ nav {
         max-width: 100%;
         height: auto;
       }
+      h3 {
+        font-size: 18px;
+        margin: 0;
+        padding: 10px 10px;
+      }
       h2 {
         font-size: 22px;
         margin: 0;
-        padding: 25px 10px;
+        padding: 10px 10px;
         a {
                 color: #474747;
         }
