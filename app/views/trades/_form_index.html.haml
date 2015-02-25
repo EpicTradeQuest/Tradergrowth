@@ -3,17 +3,19 @@
     %h2
       =pluralize(@pin.errors.count, "error")
       prevented this Trade from saving
+      Log a Trade
     %ul
       - @pin.errors.full_messages.each do |msg|
         %li = msg
   .form-inline.form_box
+    %h2 Log a Trade
     .form-group
       = f.input :screenshot, input_html: { class: 'form-control' }
 
     .form-group
-      = f.input :result, input_html: { class: 'form-control' }
+      = f.input :result, input_html: { class: 'form-control' , placeholder: 'Pips or Points' }
 
     .form-group
-      = f.input :tag_list, input_html: { class: 'form-control' }
+      = f.input :tag_list, input_html: { class: 'form-control', placeholder: 'Seperate with commas'  }
 
     = f.button :submit, "Log Trade", class: "btn btn-danger"
