@@ -11,5 +11,7 @@ class ReviewController < ApplicationController
         @trades = Trade.tagged_with(params[:query])
         @tags = params[:query]
         @pipresult = @trades.sum :result
+        @average = @trades.average(:result).round(1)
+        @winrate = (@trades.where('result > 0').count.to_f / @trades.count.to_f) * 100
     end
 end
