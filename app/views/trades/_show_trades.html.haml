@@ -1,0 +1,11 @@
+#pins.transitions-enabled
+  -@trades.order("created_at desc").each do |trade|
+    .box.panel.panel-default
+      = link_to (image_tag trade.screenshot.url), trade
+      %br
+      %small=  trade.created_at.strftime("%d %b. %Y")
+      %h2= "#{trade.result} pips"
+      %p= "Tags: #{trade.tag_list}"
+      = link_to ("edit"), edit_trade_path(trade)
+      |
+      = link_to 'delete', trade_path(trade), method: :Delete, data: { confirm: "Are you sure you want to delete this trade?"}

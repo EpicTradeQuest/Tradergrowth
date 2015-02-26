@@ -11,7 +11,7 @@
                 %p.description= @trade.description
                 %h2 Tags
                 - @trade.tags.each do |tag|
-                    %p= link_to tag, tag_path(tag)
+                    %p= link_to tag, review_path(tag)
             .panel-footer
                 .row
                     .col-md-6

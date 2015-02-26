@@ -66,12 +66,23 @@ GEM
     columnize (0.9.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    elasticsearch (1.0.6)
+      elasticsearch-api (= 1.0.6)
+      elasticsearch-transport (= 1.0.6)
+    elasticsearch-api (1.0.6)
+      multi_json
+    elasticsearch-transport (1.0.6)
+      faraday
+      multi_json
     erubis (2.7.0)
     execjs (2.3.0)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     haml (4.0.6)
       tilt
+    hashie (3.4.0)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.2.7)
@@ -92,6 +103,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     paperclip (4.2.1)
@@ -121,6 +133,8 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.1)
       loofah (~> 2.0)
+    rails4-autocomplete (1.1.1)
+      rails (>= 3.0)
     railties (4.2.0)
       actionpack (= 4.2.0)
       activesupport (= 4.2.0)
@@ -139,6 +153,10 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    searchkick (0.8.7)
+      activemodel
+      elasticsearch (>= 1)
+      hashie
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -184,8 +202,10 @@ DEPENDENCIES
   masonry-rails (~> 0.2.4)
   paperclip (~> 4.2.1)
   rails (= 4.2.0)
+  rails4-autocomplete (~> 1.1.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  searchkick
   simple_form (~> 3.1.0)
   spring
   sqlite3
