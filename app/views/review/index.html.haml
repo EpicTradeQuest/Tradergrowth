@@ -1,6 +1,9 @@
-= form_tag 'review_path', method: :get do
-    .form-group
-        = text_field_tag :query, params[:query], autocomplete: "off", input_html: { class: "form-control" }
-    = submit_tag "Search", input_html: { class: "btn btn-primary" }
-
-= render "show_trades"
+= form_for 'review_route', method: :get, input_class: "form-inline form_box" do
+    .form-inline
+        .form-group.form_box
+            %h2 Search Your Trade Tags
+            = text_field_tag :query, params[:query], class: "form-control", placeholder: 'Seperate with commas'
+            = submit_tag "Search Trades", class: "btn btn-warning"
+- if params[:query].present? && Trade.tagged_with(params[:query]).exists?
+    = render "statistics"
+    = render "show_trades"
