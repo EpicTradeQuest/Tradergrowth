@@ -9,7 +9,7 @@ class ReviewController < ApplicationController
                     flash.now[:error] = "Hmmm, those tags don't seem to exist!  Try again?"
                     render 'index'
                 else
-                    @trades = Trade.tagged_with(params[:query])
+                    @trades = current_user.trades.tagged_with(params[:query])
                     # @daterange = @trades.created_between(:startdate, :enddate)
                     @tags = params[:query]
                     @chart = @trades.count(:created_at)
@@ -20,7 +20,7 @@ class ReviewController < ApplicationController
                     @largestloss = @trades.minimum :result
                 end
         else
-            @trades = Trade.all
+            @trades = current_user.trades.all
         end
     end
 end
