@@ -14,6 +14,8 @@ gem 'simple_form', '~> 3.1.0'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'rails4-autocomplete', '~> 1.1.1'
 gem 'searchkick'
+gem 'chartkick'
+gem 'groupdate'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc

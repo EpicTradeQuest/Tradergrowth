@@ -52,6 +52,7 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    chartkick (1.3.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.5)
@@ -80,6 +81,8 @@ GEM
       multipart-post (>= 1.2, < 3)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
+    groupdate (2.4.0)
+      activesupport (>= 3)
     haml (4.0.6)
       tilt
     hashie (3.4.0)
@@ -195,7 +198,9 @@ DEPENDENCIES
   acts-as-taggable-on (~> 3.4.4)
   bootstrap-sass (~> 3.3.3)
   byebug
+  chartkick
   coffee-rails (~> 4.1.0)
+  groupdate
   haml (~> 4.0.6)
   jbuilder (~> 2.0)
   jquery-rails

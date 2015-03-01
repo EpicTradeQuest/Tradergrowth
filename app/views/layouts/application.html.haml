@@ -4,6 +4,7 @@
     %title Tradejournal.co
 
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "//www.google.com/jsapi", "chartkick"
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tag
 %body
@@ -11,11 +12,11 @@
         .container
             .navbar-brand= link_to "tradejournal", root_path
             %ul.nav.navbar-nav.navbar-right
+                %li= link_to "Dashboard", trades_path
+                %li= link_to "Review", review_index_path
                 %li= link_to "Sign Up",  root_path
                 %li= link_to "Login",  root_path
 
     .container
-        - flash.each do |name, msg|
-            = content_tag :div, msg, class: "alert alert-info"
 
         = yield

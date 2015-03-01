@@ -1,11 +1,10 @@
-#edit_page.col-md-8.col-md-offset-2
-    .row
+#pin_show.row
+    .col-md-8.col-md-offset-2
         .panel.panel-default
-            .panel-heading
+            .panel-heading.pin_image
                 %h1 Edit Trade
+                = image_tag @trade.screenshot.url(:large)
             .panel-body
-                .current_image
-                    = image_tag @trade.screenshot.url(:medium)
                 = render 'form'
 
                 = link_to 'Show', @trade

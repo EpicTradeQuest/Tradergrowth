@@ -1,18 +1,26 @@
 .stat_box
-    %h1 Results for tags: #{@tags}
-    %p
-        Total pips:
-        #{@pipresult}
-    %p
-        Average trade outcome:
-        #{@average} pips
-    %p
-        Winning percentage:
-        #{@winrate}%
-    %p
-        Largest win:
-        #{@largestwin}
-    %p
-        Largest loss:
-        #{@largestloss}
+    .row
+        %h1 Results for tags: #{@tags}
+        %br
+    .row
+        .col-md-8.col-md-offeset-2
+            = line_chart @trades
+    .row
+        .col-md-3.col-md-offset-3
+            %p
+                Total pips:
+                #{@pipresult}
+            %p
+                Average trade outcome:
+                #{@average} pips
+            %p
+                Winning percentage:
+                #{@winrate}%
+        .col-md-3
+            %p
+                Largest win:
+                #{@largestwin}
+            %p
+                Largest loss:
+                #{@largestloss}
 

@@ -22,14 +22,11 @@ class TradesController < ApplicationController
   def create
     @trade = Trade.new(trade_params)
 
-    respond_to do |format|
-      if @trade.save
-        format.html { redirect_to action: 'index'}
-        format.json { render :show, status: :created, location: @trade }
-      else
-        format.html { render action: 'index' }
-        format.json { render json: @trade.errors, status: :unprocessable_entity }
-      end
+    if @trade.save
+      flash[:success] = "Trade successfully logged."
+      redirect_to action: 'index'
+    else
+      render action: 'index'
     end
   end
 
