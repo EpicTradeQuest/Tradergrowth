@@ -8,8 +8,8 @@ class ReviewController < ApplicationController
                     flash.now[:error] = "Hmmm, those tags don't seem to exist!  Try again?"
                     render 'index'
                 else
-                    @daterange = Trade.where(:created_at => :startdate..:enddate)
                     @trades = Trade.tagged_with(params[:query])
+                    # @daterange = @trades.created_between(:startdate, :enddate)
                     @tags = params[:query]
                     @chart = @trades.count(:created_at)
                     @pipresult = @trades.sum :result
