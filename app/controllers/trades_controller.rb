@@ -1,11 +1,12 @@
 class TradesController < ApplicationController
   before_action :set_trade, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /trades
   # GET /trades.json
   def index
-    @trade = Trade.new
-    @trades = Trade.all
+    @trade = current_user.trades.build
+    @trades = current_user.trades.all
   end
 
   # GET /trades/1
@@ -20,7 +21,7 @@ class TradesController < ApplicationController
   # POST /trades
   # POST /trades.json
   def create
-    @trade = Trade.new(trade_params)
+    @trade = current_user.trades.build(trade_params)
 
     if @trade.save
       flash[:success] = "Trade successfully logged."

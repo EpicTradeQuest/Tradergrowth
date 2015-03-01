@@ -7,6 +7,7 @@
     = javascript_include_tag "//www.google.com/jsapi", "chartkick"
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tag
+
 %body
     %nav.navbar.navbar-default
         .container
@@ -16,7 +17,8 @@
                 %li= link_to "Review", review_index_path
                 %li= link_to "Sign Up",  root_path
                 %li= link_to "Login",  root_path
-
     .container
-
+        = flash_messages
         = yield
+
+

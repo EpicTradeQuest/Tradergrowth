@@ -6,7 +6,6 @@
             = date_field :startdate, params[:startdate], class: "form-control", placeholder: 'From date'
             = date_field :enddate, params[:enddate], class: "form-control", placeholder: 'To date'
             = submit_tag "Search Trades", class: "btn btn-warning"
-= flash_messages
 - if params[:query].present? && Trade.tagged_with(params[:query]).exists?
     = render "statistics"
     = render "show_trades"
