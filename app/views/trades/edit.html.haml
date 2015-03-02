@@ -5,7 +5,8 @@
                 %h1 Edit Trade
                 = image_tag @trade.screenshot.url(:large)
             .panel-body
-                = render 'form'
+                .form-actions
+                    = render 'form'
 
-                = link_to 'Show', @trade
-                = link_to 'Cancel', :back
+                    = link_to 'Show', @trade
+                    = link_to 'Cancel', :back

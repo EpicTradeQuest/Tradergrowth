@@ -120,6 +120,7 @@ nav {
 #pin_show {
     .panel-heading {
         padding: 0;
+        background-color: white;
     }
     .pin_image {
         img {
@@ -172,7 +173,9 @@ textarea {
 }
 
 .panel-heading{
-  background-color:#fff;
+  h1 {
+    text-align: center;
+  }
 }
 
 .form-control{
@@ -183,4 +186,10 @@ textarea {
 
 .panel-body p{
   color:#555;
+}
+
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
 }

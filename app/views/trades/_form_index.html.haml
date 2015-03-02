@@ -2,12 +2,15 @@
   .form-inline.form_box
     %h2 Log a Trade
     .form-group
-      = f.input :screenshot, class: 'form-control'
+      = f.label "Upload Screenshot"
+      = f.input :screenshot, input_html: { class: 'form-control' }, label: false
 
     .form-group
-      = f.input :result, input_html: { placeholder: 'Pips or Points' }, class: 'form-control'
+      = f.label "Trade result"
+      = f.input :result, input_html: { placeholder: 'Pips or Points', class: 'form-control' }, label: false
 
     .form-group
-      = f.input :tag_list, input_html: { placeholder: 'Seperate with commas'  }, class: 'form-control'
+      = f.label "Tags"
+      = f.input :tag_list, input_html: { placeholder: 'Seperate with commas', class: 'form-control'  }, label: false
 
     = f.button :submit, "Log Trade", class: "btn btn-danger"
