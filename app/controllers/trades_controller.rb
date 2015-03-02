@@ -52,7 +52,6 @@ class TradesController < ApplicationController
     @trade.destroy
       flash[:success]= 'Trade was successfully deleted.'
       redirect_to action: 'index'
-    end
   end
 
   private
