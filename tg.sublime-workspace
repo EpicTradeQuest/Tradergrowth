@@ -23,6 +23,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/controllers/trades_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1694,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/review_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1172,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -79,42 +95,45 @@
 		"/Users/ben/Desktop/dev/tradergrowth",
 		"/Users/ben/Desktop/dev/tradergrowth/app",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/images/medium",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts",
 		"/Users/ben/Desktop/dev/tradergrowth/app/controllers",
-		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/concerns",
-		"/Users/ben/Desktop/dev/tradergrowth/app/helpers",
 		"/Users/ben/Desktop/dev/tradergrowth/app/models",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views",
 		"/Users/ben/Desktop/dev/tradergrowth/app/views/layouts",
 		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades",
-		"/Users/ben/Desktop/dev/tradergrowth/bin",
-		"/Users/ben/Desktop/dev/tradergrowth/config"
+		"/Users/ben/Desktop/dev/tradergrowth/db/migrate",
+		"/Users/ben/Desktop/dev/tradergrowth/vendor/assets",
+		"/Users/ben/Desktop/dev/tradergrowth/vendor/assets/stylesheets"
 	],
 	"file_history":
 	[
-		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/trades_controller.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_form_index.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_show_trades.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/layouts/application.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_form.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/application.js",
 		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/review_controller.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/index.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/layouts/application.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_show_trades.html.haml",
 		"/Users/ben/Desktop/dev/tradergrowth/app/models/trade.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/models/user.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150301111346_add_user_id_to_trades.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/index.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/config/application.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/config/routes.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/Gemfile",
+		"/Users/ben/Desktop/dev/tradergrowth/config/environments/development.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/config/environment.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/trades_controller.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/index.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/_statistics.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/application.scss",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/show.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/edit.html.haml",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/trades.coffee",
+		"/Users/ben/Desktop/dev/tradergrowth/vendor/assets/stylesheets/bootplus.css",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_form_index.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/application.js",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_form.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/show.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/_show_trades.html.haml",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/validator.js",
 		"/Users/ben/Downloads/jquery-validation-1.13.1/lib/require.js",
 		"/Users/ben/Downloads/jquery-validation-1.13.1/lib/jquery.form.js",
 		"/Users/ben/Desktop/dev/tradergrowth/app/helpers/application_helper.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/show.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/application.scss",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/_statistics.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/_show_trades.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/index.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/show.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/config/routes.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/Gemfile",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/scaffolds.scss",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/tags_controller.scss",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/trades.scss",
@@ -133,7 +152,6 @@
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/jquery-ui.css",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/external/jquery/jquery.js",
 		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/application_controller.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/edit.html.haml",
 		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/new.html.haml",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/images/large/missing.png",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/images/.keep",
@@ -166,7 +184,7 @@
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 54.0
 	},
 	"find_in_files":
 	{
@@ -181,6 +199,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"responsive",
 			"review_path",
 			"\")\n"
 		],
@@ -200,8 +219,189 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/trades_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								233,
+								214
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/review_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1142,
+								1142
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -278,7 +478,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 271.0,
+	"side_bar_width": 215.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
