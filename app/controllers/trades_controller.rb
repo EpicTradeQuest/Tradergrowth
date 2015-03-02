@@ -27,7 +27,8 @@ class TradesController < ApplicationController
       flash[:success] = "Trade successfully logged."
       redirect_to action: 'index'
     else
-      render action: 'index'
+      flash[:danger] = "You can't submit an empty trade!"
+      redirect_to action: 'index'
     end
   end
 

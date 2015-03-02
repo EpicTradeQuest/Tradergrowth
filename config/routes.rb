@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     end
   end
     #get "/review" => "tags#review"
-
+  resources :charges
   root 'trades#index'
 end
