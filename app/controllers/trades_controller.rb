@@ -38,10 +38,10 @@ class TradesController < ApplicationController
     respond_to do |format|
       if @trade.update(trade_params)
         flash[:success]= 'Trade was successfully updated!'
-        format.html { redirect_to action: 'index' }
+        redirect_to action: 'index'
       else
         flash[:warning]= 'Update unsuccessful'
-        format.html { render :edit }
+        render :edit
       end
     end
   end
@@ -52,7 +52,7 @@ class TradesController < ApplicationController
     @trade.destroy
     respond_to do |format|
       flash[:success]= 'Trade was successfully deleted.'
-      format.html { redirect_to action: 'index' }
+      redirect_to action: 'index'
     end
   end
 
