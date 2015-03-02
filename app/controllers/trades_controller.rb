@@ -50,7 +50,6 @@ class TradesController < ApplicationController
   # DELETE /trades/1.json
   def destroy
     @trade.destroy
-    respond_to do |format|
       flash[:success]= 'Trade was successfully deleted.'
       redirect_to action: 'index'
     end
