@@ -36,11 +36,11 @@ class TradesController < ApplicationController
   def update
     respond_to do |format|
       if @trade.update(trade_params)
-        format.html { redirect_to action: 'index', notice: 'Trade was updated.' }
-        format.json { render :show, status: :ok, location: @trade }
+        flash[:success]= 'Trade was successfully updated!'
+        format.html { redirect_to action: 'index' }
       else
+        flash[:warning]= 'Update unsuccessful'
         format.html { render :edit }
-        format.json { render json: @trade.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -50,8 +50,8 @@ class TradesController < ApplicationController
   def destroy
     @trade.destroy
     respond_to do |format|
-      format.html { redirect_to action: 'index', notice: 'Trade was successfully deleted.' }
-      format.json { head :no_content }
+      flash[:success]= 'Trade was successfully deleted.'
+      format.html { redirect_to action: 'index' }
     end
   end
 
