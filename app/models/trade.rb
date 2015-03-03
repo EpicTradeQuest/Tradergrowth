@@ -1,6 +1,6 @@
 class Trade < ActiveRecord::Base
     belongs_to :user
-    searchkick
+
     acts_as_taggable
 
     has_attached_file :screenshot,
