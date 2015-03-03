@@ -3,7 +3,7 @@
     .form-inline
         .form-group.form_box
             %h2 Search Your Trade Tags
-            = text_field_tag :query, params[:query], class: "form-control", placeholder: 'Seperate with commas'
+            = text_field_tag :query, params[:query], class: "form-control", placeholder: 'Separate with commas'
             = date_field :startdate, params[:startdate], class: "form-control", placeholder: 'From date'
             = date_field :enddate, params[:enddate], class: "form-control", placeholder: 'To date'
             = submit_tag "Search Trades", class: "btn btn-warning"
