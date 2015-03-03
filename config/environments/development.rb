@@ -38,4 +38,15 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  Paperclip::Attachment.default_options.merge!(
+  :storage => :fog,
+  :fog_credentials => {
+    :provider => 'AWS',
+    :aws_access_key_id => ENV['AKIAJFWJFPY2SWFTTZSA'],
+    :aws_secret_access_key => ENV['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'],
+  },
+  :fog_directory => ENV['tradejournal'],
+  :bucket => ENV['tradejournal']
+)
+
 end

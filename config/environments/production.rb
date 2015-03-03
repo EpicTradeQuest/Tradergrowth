@@ -77,4 +77,15 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  Paperclip::Attachment.default_options.merge!(
+  :storage => :fog,
+  :fog_credentials => {
+    :provider => 'AWS',
+    :aws_access_key_id => ENV['AKIAJFWJFPY2SWFTTZSA'],
+    :aws_secret_access_key => ENV['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'],
+    :region => 'us-east-1'
+  },
+  :fog_directory => ENV['tradejournal'], # only one of those is needed but I don't remember which
+  :bucket => ENV['tradejournal']
+)
 end
