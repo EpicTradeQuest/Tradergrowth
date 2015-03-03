@@ -19,5 +19,5 @@
 # Ignore Stripe keys
 /config/initializers/stripe.rb
 
-#Ignore AWS keys
-/config/environments/
+# Ignore application configuration
+/config/application.yml
