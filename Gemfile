@@ -17,6 +17,7 @@ gem 'chartkick'
 gem 'groupdate'
 gem 'devise', '~> 3.4.1'
 gem 'stripe'
+gem 'aws-sdk'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -37,7 +38,5 @@ group :production do
     gem 'pg'
 
     gem 'rails_12factor'
-
-    gem 'aws-sdk'
 
 end
