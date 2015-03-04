@@ -4,8 +4,9 @@
         %br
     .row
         .col-md-8.col-md-offset-2
-            = line_chart @chart.group(:created_at).sum(:result)
-
+            -# = line_chart @chart.group(:created_at).sum(:result)
+            = line_chart @chart.group(:created_at).sum(:Result).order("day asc").count.map { |x,y| { x => (@sum += y)} }.reduce({}, :merge)
+            -# User.group_by_week(:created_at).order("week asc").count.map { |x,y| { x => (sum += y)} }.reduce({}, :merge)
     .row
         .col-md-3.col-md-offset-3
             %p
