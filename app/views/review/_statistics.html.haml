@@ -3,8 +3,8 @@
         %h1 Results for tags: #{@tags}
         %br
     .row
-        .col-md-8.col-md-offeset-2
-            = line_chart @trades
+        .col-md-8.col-md-offset-2
+            = line_chart @trades.group_by_day(:created_at).count
     .row
         .col-md-3.col-md-offset-3
             %p
