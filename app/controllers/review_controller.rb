@@ -12,7 +12,7 @@ class ReviewController < ApplicationController
                     @sum = 0 #used for cumulative chart
                     @trades = current_user.trades.tagged_with(params[:query])
                     # @daterange = @trades.created_between(:startdate, :enddate)
-                    @chart = current_user.trades
+                    @chart = current_user.trades.all
                     @tags = params[:query]
                     @pipresult = @trades.sum :result
                     @average = @trades.average(:result).round(1)
