@@ -11,7 +11,7 @@ class ReviewController < ApplicationController
                 else
                     @sum = 0 #used for cumulative chart
                     @trades = current_user.trades.tagged_with(params[:query])
-                    @tradecreated = current_user.trades.select(:created_at)
+                    @tradecreated = Trade.select(:created_at)
                     # @daterange = @trades.created_between(:startdate, :enddate)
                     # @chart = current_user.trades.all
                     @tags = params[:query]
