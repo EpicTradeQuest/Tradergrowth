@@ -9,11 +9,9 @@ class ReviewController < ApplicationController
                     flash.now[:error] = "Hmmm, those tags don't seem to exist!  Try again?"
                     render 'index'
                 else
-                    @sum = 0 #used for cumulative chart
+                    @sum = 0
                     @trades = current_user.trades.tagged_with(params[:query])
-                    # @tradecreated = Trade.select(:created_at)
                     # @daterange = @trades.created_between(:startdate, :enddate)
-                    # @chart = current_user.trades.tagged_with(params[:query])
                     @tags = params[:query]
                     @pipresult = @trades.sum :result
                     @average = @trades.average(:result).round(1)
