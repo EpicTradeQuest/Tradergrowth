@@ -6,7 +6,7 @@
         .col-md-8.col-md-offset-2
             -# = line_chart @trades.group(:created_at).sum(:result)
             -# = line_chart @chart.group(:created_at).sum(:Result).order("day asc").count.map { |x,y| { x => (@sum += y)} }.reduce({}, :merge)
-            = line_chart @trades.group_by_day(:specify_selected).order("day asc").sum(:result).map { |x,y| { x => (@sum += y)} }.reduce({}, :merge)
+            = line_chart @trades.group_by_day("trades.created_at").order("day asc").sum(:result).map { |x,y| { x => (@sum += y)} }.reduce({}, :merge)
     .row
         .col-md-3.col-md-offset-3
             %p

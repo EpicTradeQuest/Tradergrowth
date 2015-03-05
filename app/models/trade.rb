@@ -15,5 +15,4 @@ class Trade < ActiveRecord::Base
     validates_with AttachmentSizeValidator, :attributes => :screenshot, :less_than => 2.megabytes
     validates :result, presence: true, length: { maximum: 8 }
 
-    scope :specify_selected, -> { created_at }
 end
