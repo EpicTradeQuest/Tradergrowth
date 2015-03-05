@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301111346) do
+ActiveRecord::Schema.define(version: 20150305102545) do
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150301111346) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "trade_unit"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
