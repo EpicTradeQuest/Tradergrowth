@@ -3,9 +3,9 @@ class ReviewController < ApplicationController
 
     def index
         if params[:query] == ''
-            flash.now[:error] = "Whoops, you didn't submit anything!  Try again?"
+            @trades = current_user.trades.all
         elsif params[:query].present?
-                unless Trade.tagged_with(params[:query]).exists?
+                unless current_user.trades.tagged_with(params[:query]).exists?
                     flash.now[:error] = "Hmmm, those tags don't seem to exist!  Try again?"
                     render 'index'
                 else
@@ -19,8 +19,6 @@ class ReviewController < ApplicationController
                     @largestwin = @trades.maximum :result
                     @largestloss = @trades.minimum :result
                 end
-        else
-            @trades = current_user.trades.all
         end
     end
 end
