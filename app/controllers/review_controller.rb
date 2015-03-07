@@ -3,6 +3,7 @@ class ReviewController < ApplicationController
 
     def index
         if params[:query] == ''
+            render 'index'
             @trades = current_user.trades.all
             @tags = "All trades"
             @pipresult = @trades.sum :result
