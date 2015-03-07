@@ -2,8 +2,7 @@ class ReviewController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        if params[:query] == ''
-            render 'index'
+        unless params[:query].present?
             @trades = current_user.trades.all
             @tags = "All trades"
             @pipresult = @trades.sum :result
