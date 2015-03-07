@@ -2,7 +2,7 @@ class ReviewController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        if params[:query].blank?
+        if params[:query].present? && :query.blank?
             @trades = current_user.trades.all
             @tags = "All trades"
             @pipresult = @trades.sum :result
