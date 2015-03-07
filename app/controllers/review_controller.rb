@@ -4,6 +4,12 @@ class ReviewController < ApplicationController
     def index
         if params[:query] == ''
             @trades = current_user.trades.all
+            @tags = "All trades"
+            @pipresult = @trades.sum :result
+            @average = @trades.average(:result).round(1)
+            @winrate = ((@trades.where('result > 0').count.to_f / @trades.count.to_f) * 100).round(1)
+            @largestwin = @trades.maximum :result
+            @largestloss = @trades.minimum :result
         elsif params[:query].present?
                 unless current_user.trades.tagged_with(params[:query]).exists?
                     flash.now[:error] = "Hmmm, those tags don't seem to exist!  Try again?"
