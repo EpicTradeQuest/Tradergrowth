@@ -6,7 +6,8 @@ class ReviewController < ApplicationController
             @sum = 0
             @trades = current_user.trades.all
             # @daterange = @trades.created_between(:startdate, :enddate)
-            @tags = params[:query]
+            @tags = 'ALL'
+            @tradenumber = @trades.count
             @pipresult = @trades.sum :result
             @average = @trades.average(:result).round(1)
             @winrate = ((@trades.where('result > 0').count.to_f / @trades.count.to_f) * 100).round(1)
@@ -22,6 +23,7 @@ class ReviewController < ApplicationController
                     @trades = current_user.trades.tagged_with(params[:query])
                     # @daterange = @trades.created_between(:startdate, :enddate)
                     @tags = params[:query]
+                    @tradenumber = @trades.count
                     @pipresult = @trades.sum :result
                     @average = @trades.average(:result).round(1)
                     @winrate = ((@trades.where('result > 0').count.to_f / @trades.count.to_f) * 100).round(1)

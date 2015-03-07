@@ -19,6 +19,7 @@ gem 'stripe'
 gem 'aws-sdk'
 gem 'fog'
 gem 'figaro'
+gem 'pg'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -31,12 +32,9 @@ group :development, :test do
 
   gem 'spring'
 
-  gem 'sqlite3'
-
 end
 
 group :production do
-    gem 'pg'
 
     gem 'rails_12factor'
 
