@@ -10,11 +10,12 @@
     .row.stats
         .col-md-3.col-md-offset-3
             %p
-                %strong Total pips:
+                %strong Total
+                = unit ":"
                 #{@pipresult}
             %p
                 %strong  Average trade outcome:
-                #{@average} pips
+                #{@average} + " " + unit
             %p
                 %strong  Winning percentage:
                 #{@winrate}%

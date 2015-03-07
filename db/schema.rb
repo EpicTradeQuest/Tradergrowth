@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305102545) do
+ActiveRecord::Schema.define(version: 20150306112255) do
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150305102545) do
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
   create_table "trades", force: :cascade do |t|
-    t.integer  "result"
+    t.float    "result"
     t.text     "description"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 20150305102545) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "trade_unit"
+    t.integer  "trade_unit"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
