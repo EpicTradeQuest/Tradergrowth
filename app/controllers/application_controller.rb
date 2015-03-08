@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_devise_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
   helper_method :unit
+  helper_method :trial_expired?
 
   def unit
     unitchoice = current_user.trade_unit
@@ -21,6 +22,15 @@ class ApplicationController < ActionController::Base
       @unit = "undefined"
     end
   end
+
+  def remaining_days
+   ((current_user.created_at + 14.days).to_date - Date.today).round
+  end
+
+  def trial_expired?
+    remaining_days <= 0
+  end
+
 
   protected
 

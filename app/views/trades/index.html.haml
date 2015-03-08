@@ -1,3 +1,6 @@
 = flash_messages
-= render 'form_index'
+- if trial_expired?
+    = render 'trial_expired'
+- else
+    = render 'form_index'
 = render 'show_trades'
