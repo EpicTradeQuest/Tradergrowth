@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :trades
   resources :charges
+  get 'charges/unsub' => 'charges#unsub', :as => :unsub_charges
   resources :review do
     collection do
         get :autocomplete

@@ -21,4 +21,17 @@ class ChargesController < ApplicationController
       flash[:success] = "Thanks for subscribing, it's great to have you here."
       redirect_to trades_path
     end
+
+    def show
+    end
+
+    def destroy
+      customer = Stripe::Customer.retrieve(current_user.stripeid)
+      customer.subscriptions.first.delete
+      current_user.subscribed = false
+      current_user.save
+
+      redirect_to trades_path
+    end
+
 end
