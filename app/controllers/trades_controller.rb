@@ -7,6 +7,7 @@ class TradesController < ApplicationController
   def index
     @trade = current_user.trades.build
     @trades = current_user.trades.all
+    @subscribed = current_user.subscribed
   end
 
   # GET /trades/1
@@ -34,6 +35,7 @@ class TradesController < ApplicationController
 
   # PATCH/PUT /trades/1
   # PATCH/PUT /trades/1.json
+
   def update
     respond_to do |format|
       if @trade.update(trade_params)

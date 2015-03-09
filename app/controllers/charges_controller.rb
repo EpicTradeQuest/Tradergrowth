@@ -1,27 +1,24 @@
 class ChargesController < ApplicationController
+    before_filter :authenticate_user!
 
     def new
     end
 
     def create
-      # Amount in cents
-      @amount = 1900
+      token = params[:stripeToken]
 
+      # Create a customer
       customer = Stripe::Customer.create(
-        :email => 'example@stripe.com',
-        :card  => params[:stripeToken]
+        card: token,
+        plan: 1986,
+        email: current_user.email
       )
 
-      charge = Stripe::Charge.create(
-        :customer    => customer.id,
-        :amount      => @amount,
-        :description => 'tradejournal.co',
-        :currency    => 'usd'
-      )
+      current_user.subscribed = true
+      current_user.stripeid = customer.id
+      current_user.save
 
-    rescue Stripe::CardError => e
-      flash[:error] = e.message
-      redirect_to charges_path
+      flash[:success] = "Thanks for subscribing, it's great to have you here."
+      redirect_to trades_path
     end
-
 end

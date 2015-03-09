@@ -1,8 +1,13 @@
 = form_tag charges_path do
-    %article
-        %label "Amount: $24.00", input_html: { class: "amount" }
-    :javascript
-        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-description="A month's subscription"
-        data-amount="2400"
+    .panel.panel-default
+        .log-in
+            %h2 Subscribe to tradejournal.co now for only $19 per month!
+            %p (And never stop learning.)
+            %br
+            = javascript_include_tag "https://checkout.stripe.com/v2/checkout.js",
+                :class => "stripe-button",
+                :"data-key" => "#{Rails.configuration.stripe[:publishable_key]}",
+                :"data-description" => "Join tradejournal.",
+                :"data-amount" => "1900",
+                :"data-label" => "Subscribe now",
+                :"data-panel-label" => "Subscribe now for "

@@ -1,6 +1,10 @@
 = flash_messages
-- if trial_expired?
-    = render 'trial_expired'
-- else
+
+- unless trial_expired?
     = render 'form_index'
+- if trial_expired? && @subscribed
+    = render 'form_index'
+- elsif trial_expired?
+    = render 'trial_expired'
+
 = render 'show_trades'

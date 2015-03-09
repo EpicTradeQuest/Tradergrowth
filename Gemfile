@@ -33,6 +33,10 @@ group :development, :test do
 
   gem 'spring'
 
+  gem 'rspec-rails'
+
+  gem 'capybara'
+
 end
 
 group :production do
