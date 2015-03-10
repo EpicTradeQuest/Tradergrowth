@@ -79,18 +79,18 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.default_url_options = { host: 'sleepy-sands-6961.herokuapp.com', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'tradejournal.co' }
 
   config.action_mailer.smtp_settings = {
     address:        'smtp.mandrillapp.com',
     port:           587,
     user_name:      ENV['MANDRILL_USERNAME'],
     password:       ENV['MANDRILL_APIKEY'],
-    domain:         'heroku.com',
+    domain:         'tradejournal.co',
     authentication: :plain
   }
   config.action_mailer.default_url_options = {
-    :host => 'sleepy-sands-6961.herokuapp.com'
+    :host => 'tradejournal.co'
   }
 
 
