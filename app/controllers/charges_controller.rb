@@ -28,8 +28,8 @@ class ChargesController < ApplicationController
     def destroy
       customer = Stripe::Customer.retrieve(current_user.stripeid)
       customer.subscriptions.first.delete
-      current_user.subscribed = false
-      current_user.save
+      # current_user.subscribed = false
+      # current_user.save
 
       redirect_to trades_path
     end
