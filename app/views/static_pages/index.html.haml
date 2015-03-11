@@ -5,19 +5,26 @@
                 %h1 Simple Trade Journaling for Smart Traders
         .row
             .col-md-6.col-md-offset-3.subheader
-                %h3
-                Journal your trades quicker than ever and discover your best and worst
-                performing trade setups.
         .row
-            .col-md-4.col-md-offset-4.video
-                %i-frame
+            .col-md-6.col-md-offset-3.video
+                = image_tag "video.gif"
         .row
             .col-md-8.col-md-offset-2.cta
-                = link_to 'Start your 14 day free trial', new_user_registration_path, class: "btn btn-warning"
+                = link_to 'Start your free 14 day trial', new_user_registration_path, class: "btn btn-lg btn-danger"
 
-    .section.features
+        .hr
+
         .row
-            .col-md-6.feature1
+
+            .col-md-8.col-md-offset-2
+                %h2
+                    Journal your trades quicker than ever and discover your best and worst
+                    performing trade setups.
+        .hr
+
+    .section.featuresect
+        .row.feature
+            .col-md-6.featbox
                 %h2 Log your trades in seconds!
                 %p
                 And learn for a lifetime.  By combining a simple tagging system with
@@ -25,21 +32,21 @@
                 longer feel like a chore. Not only will your journaling take less time than ever
                 before, you'll be able to extract previously hidden, priceless feedback from your results
                 that could change your trading forever.
-            .col-md-6.feature1.image
+            .col-md-6.image.featbox
                 -#= image_tag
 
-        .row
-            .col-md-6.feature2.image
+        .row.feature
+            .col-md-6.image.featbox
                 -#= image_tag
-            .col-md-6.feature2
+            .col-md-6.featbox
                 %h2 Make your screenshots the hero
                 %p
                 Leverage the power of your screenshots to identify your best setups in the
                 market.  Never question what your all-star trades look like and compare your best
                 and worst trades to ensure constant improvement.
 
-        .row
-            .col-md-6.feature3
+        .row.feature
+            .col-md-6.featbox
                 %h2 Tag your trades to unlock your potential
                 %p
                 By replacing dozens of fields with a simple tag system, you can choose
@@ -48,50 +55,54 @@
                 them as tags on those specific trades and easily determine how their addition is
                 impacting your results.  Are you a trader still working out your system?  Add the
                 rules you're testing as tags and find the combination that is most profitable.
-            .col-md-6.feature3.image
+            .col-md-6.feature3.image.featbox
                 -#= image_tag
 
-        .row
-            .col-md-6.feature4
+        .row.feature
+            .col-md-6.feature4.image.featbox
+                -#
+            .col-md-6
                 %h2 Deeply understand your performance and constantly improve
                 %p
                 Simply by tagging your trades, you'll have access to an incredible amount of
                 depth and insight into your performance that was never before possible.  By tagging
                 your trades with their specific nuances, you'll be able to discover exactly what's working
                 for you and unveil specific setups which are simply not profitable.
-            .col-md-6.feature4.image
-                -#
-        .row
-            .col-md-6.feature5.image
-                -#= image_tag
-            .col-md-6.feature5
+
+        .row.feature
+            .col-md-6.featbox
                 %h2 Our secure cloud server means your data is always safe and protected
                 %p
                 You'll never have to worry about crashes or accidents again.  By storing your valuable
                 data on our secure, protected cloud server, you're guaranteeing that it will
                 will be safe so long as you're willing to improve.
+            .col-md-6.image
+                -#= image_tag
 
-        .row
-            .col-md-6.feature6
+        .row.feature
+            .col-md-6.image.featbox
+                -#= image_tag
+            .col-md-6
                 %h2 We love all traders (forex, futures, stocks, options....)
                 %p
                 You choose how you want to record your results, whether it's in pips, points, dollars,
                 R or percent.  No matter how you like to measure your returns, we'll ensure you're
                 wasting less time journaling and more time trading and learning.
-            .col-md-6.feature6.image
-                -#= image_tag
 
+    .hr
 
     .section.midcta
         .row
             .col-md-8.col-md-offset-2.cta
-                %p "Start your 14 day free trial instantly"
-                = link_to 'Start your 14 day free trial', new_user_registration_path, class: "btn btn-warning"
+                %h3 Journal in seconds, learn forever.  Join now for a free 14 day trial, it's a great risk/reward opportunity!
+                = link_to 'Start your free 14 day trial', new_user_registration_path, class: "btn btn-lg btn-danger"
+
+    .hr
 
     .section.faq
         .row
             .col-md-8.col-md-offset-2
-                %h2 Frequently Asked Questions
+                %h2 FAQ
         .row
             .col-md-6.col-md-offset-3.question
                 %h3 How does this differ from the other online trading journals?
@@ -130,7 +141,7 @@
                 still creating an incredible resource for yourself.
         .row
             .col-md-6.col-md-offset-3.question
-                %h2 Do I have to upload screenshots?
+                %h3 Do I have to upload screenshots?
         .row
             .col-md-8.col-md-offset-2.answer
                 %p
@@ -144,23 +155,23 @@
 
         .row
             .col-md-6.col-md-offset-3.question
-                %h2 How much does tradejournal cost after the 14 day free trial?
+                %h3 How much does tradejournal cost after the 14 day free trial?
         .row
             .col-md-8.col-md-offset-2.answer
                 %p
-                tradejournal will cost you only $24 a month after your 14 day free trial.  For that you get
-                incredibly simple and fast, cloud-based trade journaling that will give you incredible insight
-                into your trading performance.
-                %p
-                You'll also receive constant updates and incredible customer support ( in
-                fact, you can email me right now at ben@tradejournal.co if you have any questions).
+                tradejournal.co will cost you only $19 a month after your 14 day free trial.  You'll get
+                incredibly fast, cloud-based trade journaling that will give you incredible insights
+                into your trading performance (You'll also receive constant updates and amazing customer support).
 
+    .hr
     .section.botcta
         .row
-            .col-md-12.cta
-                %p " Why not start your 14 day free trial right now?"
+            .col-md-8.col-md-offset-2.cta
+                %h3 Journal in seconds, learn forever.  Join now for a free 14 day trial, it's a great risk/reward opportunity!
                 %p (no credit card is required)
-                = link_to 'Start your 14 day free trial', new_user_registration_path, class: "btn btn-warning"
+                = link_to 'Start your free 14 day trial', new_user_registration_path, class: "btn btn-lg btn-danger"
+    .hr
+
 
 .footer
     .row
