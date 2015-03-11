@@ -182,6 +182,8 @@ GEM
     formatador (0.2.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
+    google-webfonts-rails (0.0.4)
+      activesupport (> 3.2.0, < 5.0)
     groupdate (2.4.0)
       activesupport (>= 3)
     haml (4.0.6)
@@ -352,6 +354,7 @@ DEPENDENCIES
   devise (~> 3.4.1)
   figaro
   fog
+  google-webfonts-rails
   groupdate
   haml (~> 4.0.6)
   jbuilder (~> 2.0)

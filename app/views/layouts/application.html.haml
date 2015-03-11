@@ -10,6 +10,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tag
 
+    = google_webfonts_init({ google: ['Roboto Slab', 'Roboto'] })
+
 %body
     %nav.navbar.navbar-default
         .container
@@ -22,7 +24,7 @@
                     %li= link_to "Log out", destroy_user_session_path, method: :delete
             - else
                 %ul.nav.navbar-nav.navbar-right
-                    %li= link_to "Sign Up",  new_user_registration_path
+                    %li= link_to "Start Your Free Trial",  new_user_registration_path, class: "navcta"
                     %li= link_to "Login",  new_user_session_path
     .container
         = yield

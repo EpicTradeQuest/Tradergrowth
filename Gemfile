@@ -23,6 +23,7 @@ gem 'pg'
 gem 'local_time'
 gem 'stripe_event'
 gem 'puma'
+gem 'google-webfonts-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
