@@ -5,6 +5,9 @@
             %h2 Search Your Trade Tags
             = text_field_tag :query, params[:query], class: "form-control", placeholder: 'Separate with commas'
             = submit_tag "Search Trades", class: "btn btn-warning"
+            .row
+                .col-md-6.col-md-offset-3
+                    .help-block (Leave blank to search all trades)
 - if (params[:query].present? && current_user.trades.tagged_with(params[:query]).exists?) || params[:query] == ""
     = render "statistics"
     = render "show_trades"
