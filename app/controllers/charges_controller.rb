@@ -30,7 +30,7 @@ class ChargesController < ApplicationController
       customer.subscriptions.first.delete
       # current_user.subscribed = false
       # current_user.save
-
+      flash[:success] = "Your subscription has been cancelled :("
       redirect_to trades_path
     end
 

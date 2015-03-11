@@ -90,7 +90,7 @@ Rails.application.configure do
     authentication: :plain
   }
   config.action_mailer.default_url_options = {
-    :host => 'tradejournal.co'
+    host: 'tradejournal.co'
   }
 
 
