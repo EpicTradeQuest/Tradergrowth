@@ -10,14 +10,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tag
 
-    = google_webfonts_init({ google: ['Roboto Slab', 'Roboto'] })
-
-    :javascript
-        $('html').addClass('hidden');
-        $(document).ready(function() {
-            $('html').removeClass('hidden');
-        });
-
 %body
     %nav.navbar.navbar-default
         .container
