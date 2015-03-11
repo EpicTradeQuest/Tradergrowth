@@ -12,12 +12,17 @@
 
       <div class="form-inputs">
         <%= f.input :password, label: "New password", required: true, autofocus: true, class: 'form-control' %>
+        <br>
         <%= f.input :password_confirmation, label: "Confirm your new password", required: true, class: 'form-control' %>
       </div>
-
+      <br>
       <div class="form-actions">
         <%= f.button :submit, "Change my password", class: 'btn btn-warning' %>
       </div>
+      <br>
 <% end %>
-
+    </div>
 <%= render "devise/shared/links" %>
+
+</div>
+</div>
