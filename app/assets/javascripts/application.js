@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require masonry/jquery.masonry
 //= require local_time
 //= require bootstrap-sprockets

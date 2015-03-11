@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :charges
 
   get 'charges/unsub' => 'charges#unsub', :as => :unsub_charges
+
   resources :review
   resources :static_pages
     #get "/review" => "tags#review"
