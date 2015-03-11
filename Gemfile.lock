@@ -182,8 +182,6 @@ GEM
     formatador (0.2.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
-    google-webfonts-rails (0.0.4)
-      activesupport (> 3.2.0, < 5.0)
     groupdate (2.4.0)
       activesupport (>= 3)
     haml (4.0.6)
@@ -252,8 +250,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.1)
       loofah (~> 2.0)
-    rails4-autocomplete (1.1.1)
-      rails (>= 3.0)
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
@@ -317,9 +313,6 @@ GEM
       json (~> 1.8.1)
       mime-types (>= 1.25, < 3.0)
       rest-client (~> 1.4)
-    stripe_event (1.5.0)
-      activesupport (>= 3.1)
-      stripe (~> 1.6)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -354,7 +347,6 @@ DEPENDENCIES
   devise (~> 3.4.1)
   figaro
   fog
-  google-webfonts-rails
   groupdate
   haml (~> 4.0.6)
   jbuilder (~> 2.0)
@@ -365,7 +357,6 @@ DEPENDENCIES
   pg
   puma
   rails (= 4.2.0)
-  rails4-autocomplete (~> 1.1.1)
   rails_12factor
   rspec-rails
   sass-rails (~> 5.0)
@@ -373,7 +364,6 @@ DEPENDENCIES
   simple_form (~> 3.1.0)
   spring
   stripe
-  stripe_event
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
