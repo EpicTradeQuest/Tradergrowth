@@ -22,6 +22,7 @@ gem 'figaro'
 gem 'pg'
 gem 'local_time'
 gem 'stripe_event'
+gem 'puma'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -43,5 +44,7 @@ end
 group :production do
 
     gem 'rails_12factor'
+
+
 
 end
