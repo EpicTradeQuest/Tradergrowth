@@ -12,4 +12,4 @@
     .form-group
       = f.input :tag_list, input_html: { class: 'form-control', value: @trade.tag_list.to_s }
 
-    = f.button :submit, class: "btn btn-danger"
+    = f.button :submit, class: "btn btn-danger", method: :update

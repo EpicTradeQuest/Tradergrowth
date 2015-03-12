@@ -6,8 +6,8 @@
         .row
             .col-md-6.col-md-offset-3.subheader
         .row
-            .col-md-6.col-md-offset-3.video
-                = image_tag "video.gif"
+            .col-md-10.col-md-offset-1.video
+                = image_tag "dashboard.png"
         .row
             .col-md-8.col-md-offset-2.cta
                 = link_to 'Start your free 14 day trial', new_user_registration_path, class: "btn btn-lg btn-danger"
@@ -33,11 +33,11 @@
                 before, you'll be able to extract previously hidden, priceless feedback from your results
                 that could change your trading forever.
             .col-md-6.image.featbox
-                -#= image_tag
+                = image_tag "tradeform.png", class: "img-responsive"
 
         .row.feature
             .col-md-6.image.featbox
-                -#= image_tag
+                = image_tag "screenshots.png", class: "img-responsive"
             .col-md-6.featbox
                 %h2 Make your screenshots the hero
                 %p
@@ -56,11 +56,11 @@
                 impacting your results.  Are you a trader still working out your system?  Add the
                 rules you're testing as tags and find the combination that is most profitable.
             .col-md-6.feature3.image.featbox
-                -#= image_tag
+                = image_tag "tagresults.png", class: "img-responsive"
 
         .row.feature
             .col-md-6.feature4.image.featbox
-                -#
+                = image_tag "tradeperform.png", class: "img-responsive"
             .col-md-6
                 %h2 Deeply understand your performance and constantly improve
                 %p
@@ -68,26 +68,6 @@
                 depth and insight into your performance that was never before possible.  By tagging
                 your trades with their specific nuances, you'll be able to discover exactly what's working
                 for you and unveil specific setups which are simply not profitable.
-
-        .row.feature
-            .col-md-6.featbox
-                %h2 Our secure cloud server means your data is always safe and protected
-                %p
-                You'll never have to worry about crashes or accidents again.  By storing your valuable
-                data on our secure, protected cloud server, you're guaranteeing that it will
-                will be safe so long as you're willing to improve.
-            .col-md-6.image
-                -#= image_tag
-
-        .row.feature
-            .col-md-6.image.featbox
-                -#= image_tag
-            .col-md-6
-                %h2 We love all traders (forex, futures, stocks, options....)
-                %p
-                You choose how you want to record your results, whether it's in pips, points, dollars,
-                R or percent.  No matter how you like to measure your returns, we'll ensure you're
-                wasting less time journaling and more time trading and learning.
 
     .hr
 

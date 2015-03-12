@@ -37,14 +37,12 @@ class TradesController < ApplicationController
   # PATCH/PUT /trades/1.json
 
   def update
-    respond_to do |format|
-      if @trade.update(trade_params)
-        flash[:success]= 'Trade was successfully updated!'
-        redirect_to action: 'index'
-      else
-        flash[:warning]= 'Update unsuccessful'
-        render :edit
-      end
+    if @trade.update(trade_params)
+      flash[:success]= 'Trade was successfully updated!'
+      redirect_to action: 'index'
+    else
+      flash[:warning]= 'Update unsuccessful'
+      render :edit
     end
   end
 
