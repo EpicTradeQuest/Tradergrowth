@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
 
+  get "privacy", to: "static_pages#privacy", as: :privacy
+  get "tos", to: "static_pages#tos", as: :tos
 end

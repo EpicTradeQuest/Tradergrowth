@@ -28,6 +28,10 @@
         <p class="help-block">This is permanent, choose wisely!.</p>
       </div>
     <div class="form-group">
+      <p class="help-block">By joing tradejournal.co you agree to our
+      <%= link_to 'privacy policy', privacy_path %>
+      and
+      <%= link_to 'terms of service', tos_path %>.</p>
       <%= f.button :submit, "Sign up", class: "btn btn-warning" %>
     </div>
     <% end %>
