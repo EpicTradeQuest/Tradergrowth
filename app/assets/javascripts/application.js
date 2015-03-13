@@ -15,7 +15,7 @@
 //= require masonry/jquery.masonry
 //= require local_time
 //= require bootstrap-sprockets
-//= require turbolinks
+
 //= require_tree
 
 
