@@ -10,7 +10,7 @@ class ChargesController < ApplicationController
       # Create a customer
       customer = Stripe::Customer.create(
         card: token,
-        plan: 1986,
+        plan: 19,
         email: current_user.email
       )
 
@@ -28,14 +28,14 @@ class ChargesController < ApplicationController
     def destroy
       if current_user.subscribed
         customer = Stripe::Customer.retrieve(current_user.stripeid)
-        customer.subscriptions.first.delete
+        customer.subscriptions.first.delete()
         # current_user.subscribed = false
         # current_user.save
-        flash[:success] = "Your subscription has been cancelled :("
+        flash[:success] = "Your subscription has been cancelled, we'll miss you."
         redirect_to trades_path
       else
-        flash[:danger] = "You're not subscribed!"
-        render trades_path
+        flash[:warning] = "You're not subscribed!"
+        redirect_to trades_path
       end
     end
 
