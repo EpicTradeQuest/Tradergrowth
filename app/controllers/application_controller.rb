@@ -6,6 +6,12 @@ class ApplicationController < ActionController::Base
   helper_method :unit
   helper_method :trial_expired?
 
+
+  def currentuser
+    @currentuser = current_user
+  end
+
+
   def unit
     unitchoice = current_user.trade_unit
     if unitchoice == 1
