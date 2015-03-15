@@ -34,9 +34,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_var
-    @user_id = current_user.id
-    @created_at = current_user.created_at.to_date
-    @email = current_user.email
+    if current_user
+      @user_id = current_user.id
+      @created_at = current_user.created_at.to_date
+      @email = current_user.email
+    end
   end
 
   protected
