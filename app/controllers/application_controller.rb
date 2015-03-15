@@ -2,14 +2,10 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   before_action :configure_devise_permitted_parameters, if: :devise_controller?
+  before_filter :set_var
   protect_from_forgery with: :exception
   helper_method :unit
   helper_method :trial_expired?
-
-
-  def currentuser
-    @currentuser = current_user
-  end
 
 
   def unit
@@ -37,6 +33,11 @@ class ApplicationController < ActionController::Base
     remaining_days <= 0
   end
 
+  def set_var
+    @user_id = current_user.id
+    @created_at = current_user.created_at.to_date
+    @email = current_user.email
+  end
 
   protected
 
