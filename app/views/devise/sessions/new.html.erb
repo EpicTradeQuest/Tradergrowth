@@ -4,7 +4,7 @@
         <div class="panel heading">
             <h2>Log in</h2>
         </div>
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), id: 'login-form') do |f| %>
     <%= f.error_notification %>
         <div class="form-group">
             <%= f.label "Email" %>

@@ -8,6 +8,7 @@
     = javascript_include_tag "//www.google.com/jsapi", "chartkick"
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tag
+    -# Segment.io Integration
     :javascript
         (function(){
 
@@ -99,13 +100,20 @@
         analytics.page();
 
         // Track usage of forms.
-        analytics.trackForm($('#trial-form'), 'Joined 14 DayTrial');
-        analytics.trackForm($('#new_user'), 'Logged in');
-        analytics.trackForm($('#subscribe-button'), 'Subscribe to tradejournal');
-        analytics.trackForm($('#trade-form'), 'Logged a trade');
+        var tradeForm = document.getElementById('trade-form');
+        analytics.trackForm(tradeForm, 'Logged a Trade', {
+            plan: 'Trial',
+        });
 
+        var loginForm = document.getElementById('new-user');
+        analytics.trackForm( loginForm, 'Logged in', {
+        });
 
-        })();
+        var subscribeForm = document.getElementById('subscribe-button');
+        analytics.trackForm(subscribeForm, 'Became a paid customer', {
+            plan: 'subscribed',
+            revenue: 19.00
+        });
 
 
 %body
