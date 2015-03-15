@@ -93,20 +93,18 @@
           email: '#{@email}'
         });
 
-
-        // Make the first page call to load the integrations. If
-        // you'd like to manually name or tag the page, edit or
-        // move this call however you'd like.
-        analytics.page();
-
         // Track usage of forms.
-        var tradeForm = document.getElementById('trade-form');
-        analytics.trackForm(tradeForm, 'Logged a Trade', {
-            plan: 'Trial',
+
+        var signUpForm = document.getElementById('trial-form');
+        analytics.trackForm(signUpForm, 'Signed up to 14 day trial', {
+            plan: 'trial'
+        });
+        var tradeButton = document.getElementById('submit-trade');
+        analytics.trackLink(tradeButton, 'Logged a Trade', {
         });
 
-        var loginForm = document.getElementById('new-user');
-        analytics.trackForm( loginForm, 'Logged in', {
+        var loginForm = document.getElementById('new_user');
+        analytics.trackForm(loginForm, 'Logged in', {
         });
 
         var subscribeForm = document.getElementById('subscribe-button');
@@ -115,6 +113,12 @@
             revenue: 19.00
         });
 
+        // Make the first page call to load the integrations. If
+        // you'd like to manually name or tag the page, edit or
+        // move this call however you'd like.
+        analytics.page();
+
+        })();
 
 %body
     %nav.navbar.navbar-default
