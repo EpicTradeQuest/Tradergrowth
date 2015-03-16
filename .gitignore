@@ -16,8 +16,5 @@
 !/log/.keep
 /tmp
 
-# Ignore Stripe keys
-/config/initializers/stripe.rb
-
 # Ignore application configuration
 /config/application.yml
