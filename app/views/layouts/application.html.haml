@@ -91,6 +91,12 @@
         analytics.identify('#{@user_id}', {
           created: '#{@created_at}',
           email: '#{@email}'
+        }, {
+            integrations: {
+                Intercom : {
+                    user_hash : '#{ OpenSSL::HMAC.hexdigest("sha256", "ENV[INTERCOMAPPSECRET]", "@user_id") }'
+                    }
+                }
         });
 
         // Track usage of forms.
@@ -99,6 +105,7 @@
         analytics.trackForm(signUpForm, 'Signed up to 14 day trial', {
             plan: 'trial'
         });
+
         var tradeButton = document.getElementById('submit-trade');
         analytics.trackLink(tradeButton, 'Logged a Trade', {
         });
