@@ -3,7 +3,7 @@
     .form-inline
         .form-group.form_box
             %h2 Search Your Trade Tags
-            = text_field_tag :query, params[:query], class: "form-control", placeholder: 'Separate with commas'
+            = text_field_tag :query, params[:query], class: "form-control", placeholder: 'Separate with commas', autofocus: true
             = submit_tag "Search Trades", class: "btn btn-warning"
             .row
                 .col-md-6.col-md-offset-3
