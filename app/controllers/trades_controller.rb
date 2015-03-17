@@ -3,25 +3,18 @@ class TradesController < ApplicationController
   before_action :authenticate_user!
   before_filter :set_var
 
-  # GET /trades
-  # GET /trades.json
   def index
     @trade = current_user.trades.build
     @trades = current_user.trades.all
     @subscribed = current_user.subscribed
   end
 
-  # GET /trades/1
-  # GET /trades/1.json
   def show
   end
 
-  # GET /trades/1/edit
   def edit
   end
 
-  # POST /trades
-  # POST /trades.json
   def create
     @trade = current_user.trades.build(trade_params)
 
@@ -34,9 +27,6 @@ class TradesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /trades/1
-  # PATCH/PUT /trades/1.json
-
   def update
     if @trade.update(trade_params)
       flash[:success]= 'Trade was successfully updated!'
@@ -47,8 +37,6 @@ class TradesController < ApplicationController
     end
   end
 
-  # DELETE /trades/1
-  # DELETE /trades/1.json
   def destroy
     @trade.destroy
       flash[:success]= 'Trade was successfully deleted.'
@@ -56,12 +44,11 @@ class TradesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_trade
       @trade = Trade.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def trade_params
       params.require(:trade).permit(:result, :description, :tag_list, :screenshot)
     end
