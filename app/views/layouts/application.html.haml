@@ -61,8 +61,6 @@
           };
         };
 
-        analytics.timeout(500);
-
         // For each of our methods, generate a queueing stub.
         for (var i = 0; i < analytics.methods.length; i++) {
           var key = analytics.methods[i];
@@ -127,6 +125,7 @@
         // move this call however you'd like.
         analytics.page();
 
+        analytics.timeout(500);
         })();
 
 %body
