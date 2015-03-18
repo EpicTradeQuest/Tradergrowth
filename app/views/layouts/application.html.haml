@@ -88,6 +88,12 @@
         // load the tools you've enabled for your account. Boosh!
         analytics.load("DixYUUZ4I9hz5wIBAAhk5wp1CxfjbC8l");
 
+        // Make the first page call to load the integrations. If
+        // you'd like to manually name or tag the page, edit or
+        // move this call however you'd like.
+        analytics.page();
+
+        // Identify the user
         analytics.identify('#{@user_id}', {
           created: '#{@created_at}',
           email: '#{@email}'
@@ -99,31 +105,13 @@
                 }
         });
 
-        // Track usage of forms.
 
-        var signUpForm = document.getElementById('trial-form');
-        analytics.trackForm(signUpForm, 'Signed up to 14 day trial', {
-            plan: 'trial'
-        });
+        // Track actions
 
-        var tradeButton = document.getElementById('submit-trade');
-        analytics.trackLink(tradeButton, 'Logged a Trade', {
-        });
+        // Logged a trade
 
-        var loginForm = document.getElementById('new_user');
-        analytics.trackForm(loginForm, 'Logged in', {
-        });
 
-        var subscribeForm = document.getElementById('subscribe-button');
-        analytics.trackForm(subscribeForm, 'Became a paid customer', {
-            plan: 'subscribed',
-            revenue: 19.00
-        });
 
-        // Make the first page call to load the integrations. If
-        // you'd like to manually name or tag the page, edit or
-        // move this call however you'd like.
-        analytics.page();
 
         })();
 
@@ -134,7 +122,7 @@
             - if user_signed_in?
                 %ul.nav.navbar-nav.navbar-right
                     %li= link_to "Dashboard", trades_path
-                    %li= link_to "Review", review_index_path
+                    %li= link_to "Review", review_index_path, id: "reviewnavbtn"
                     %li= link_to "Account", edit_user_registration_path
                     %li= link_to "Log out", destroy_user_session_path, method: :delete
             - else
@@ -145,8 +133,48 @@
 
         = yield
 
+    .footer
+        :javascript
+            var tr = document.getElementById('tradebtn');
+            if(tr){
+                tr.addEventListener('click', function(e) {
+                    analytics.track('Logged a Trade');
+                });
+            };
 
+            // document.getElementById('tradebtn').addEventListener('click', function(e) {
+            //    analytics.track('Logged a Trade');
+            // });
 
+            var re = document.getElementById('reviewbtn');
+            if(re){
+                re.addEventListener('click', function(e) {
+                    analytics.track('Reviewed a Trade');
+                });
+            };
 
+            // document.getElementById('reviewbtn').addEventListener('click', function(e) {
+            //    analytics.track('Reviewed a Trade');
+            // });
 
+            var reg = document.getElementById('registerbtn');
+            if(reg){
+                reg.addEventListener('click', function(e) {
+                    analytics.track('Registered for 14 Day Trial');
+                });
+            };
 
+            // document.getElementById('registerbtn').addEventListener('click', function(e) {
+            //    analytics.track('Registered for 14 Day Trial');
+            // });
+
+            var login = document.getElementById('loginbtn');
+            if(login){
+                login.addEventListener('click', function(e) {
+                    analytics.track('Logged In');
+                });
+            };
+
+            //document.getElementById('loginbtn').addEventListener('click', function(e) {
+            //    analytics.track('Registered for 14 Day Trial');
+            //});
