@@ -96,6 +96,7 @@
         // Identify the user
         analytics.identify('#{@user_id}', {
           created: '#{@created_at}',
+          subscribed: '#{@subscribed}',
           email: '#{@email}'
         }, {
             integrations: {
