@@ -1,181 +1,181 @@
 !!! 5
 %html
-%head
-    %title tradejournal.co
+    %head
+        %title tradejournal.co
 
-    = favicon_link_tag 'favicon.ico'
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "//www.google.com/jsapi", "chartkick"
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tag
-    -# Segment.io Integration
-    :javascript
-        (function(){
-
-        // Create a queue, but don't obliterate an existing one!
-        var analytics = window.analytics = window.analytics || [];
-
-        // If the real analytics.js is already on the page return.
-        if (analytics.initialize) return;
-
-        // If the snippet was invoked already show an error.
-        if (analytics.invoked) {
-          if (window.console && console.error) {
-            console.error('Segment snippet included twice.');
-          }
-          return;
-        }
-
-        // Invoked flag, to make sure the snippet
-        // is never invoked twice.
-        analytics.invoked = true;
-
-        // A list of the methods in Analytics.js to stub.
-        analytics.methods = [
-          'trackSubmit',
-          'trackClick',
-          'trackLink',
-          'trackForm',
-          'pageview',
-          'identify',
-          'group',
-          'track',
-          'ready',
-          'alias',
-          'page',
-          'once',
-          'off',
-          'on'
-        ];
-
-        // Define a factory to create stubs. These are placeholders
-        // for methods in Analytics.js so that you never have to wait
-        // for it to load to actually record data. The `method` is
-        // stored as the first argument, so we can replay the data.
-        analytics.factory = function(method){
-          return function(){
-            var args = Array.prototype.slice.call(arguments);
-            args.unshift(method);
-            analytics.push(args);
-            return analytics;
-          };
-        };
-
-        // For each of our methods, generate a queueing stub.
-        for (var i = 0; i < analytics.methods.length; i++) {
-          var key = analytics.methods[i];
-          analytics[key] = analytics.factory(key);
-        }
-
-        // Define a method to load Analytics.js from our CDN,
-        // and that will be sure to only ever load it once.
-        analytics.load = function(key){
-          // Create an async script element based on your key.
-          var script = document.createElement('script');
-          script.type = 'text/javascript';
-          script.async = true;
-          script.src = ('https:' === document.location.protocol ? 'https://' : 'http://') + 'cdn.segment.com/analytics.js/v1/' + key + '/analytics.min.js';
-
-          // Insert our script next to the first script element.
-          var first = document.getElementsByTagName('script')[0];
-          first.parentNode.insertBefore(script, first);
-        };
-
-        // Add a version to keep track of what's in the wild.
-        analytics.SNIPPET_VERSION = '3.0.1';
-
-        // Load Analytics.js with your key, which will automatically
-        // load the tools you've enabled for your account. Boosh!
-        analytics.load("DixYUUZ4I9hz5wIBAAhk5wp1CxfjbC8l");
-
-        // Make the first page call to load the integrations. If
-        // you'd like to manually name or tag the page, edit or
-        // move this call however you'd like.
-        analytics.page();
-
-        // Identify the user
-        analytics.identify('#{@user_id}', {
-          created: '#{@created_at}',
-          subscribed: '#{@subscribed}',
-          email: '#{@email}'
-        }, {
-            integrations: {
-                Intercom : {
-                    user_hash : '#{ OpenSSL::HMAC.hexdigest("sha256", "ENV[INTERCOMAPPSECRET]", "@user_id") }'
-                    }
-                }
-        });
-
-
-        // Track actions
-
-        // Logged a trade
-
-
-
-
-        })();
-
-%body
-    %nav.navbar.navbar-default
-        .container
-            .navbar-brand= link_to "tradejournal", root_path
-            - if user_signed_in?
-                %ul.nav.navbar-nav.navbar-right
-                    %li= link_to "Dashboard", trades_path
-                    %li= link_to "Review", review_index_path, id: "reviewnavbtn"
-                    %li= link_to "Account", edit_user_registration_path
-                    %li= link_to "Log out", destroy_user_session_path, method: :delete
-            - else
-                %ul.nav.navbar-nav.navbar-right
-                    %li= link_to "Start Your Free Trial",  new_user_registration_path, class: "navcta"
-                    %li= link_to "Login",  new_user_session_path
-    .container
-
-        = yield
-
-    .footer
+        = favicon_link_tag 'favicon.ico'
+        = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+        = javascript_include_tag "//www.google.com/jsapi", "chartkick"
+        = javascript_include_tag 'application', 'data-turbolinks-track' => true
+        = csrf_meta_tag
+        -# Segment.io Integration
         :javascript
-            var tr = document.getElementById('tradebtn');
-            if(tr){
-                tr.addEventListener('click', function(e) {
-                    analytics.track('Logged a Trade');
-                });
+            (function(){
+
+            // Create a queue, but don't obliterate an existing one!
+            var analytics = window.analytics = window.analytics || [];
+
+            // If the real analytics.js is already on the page return.
+            if (analytics.initialize) return;
+
+            // If the snippet was invoked already show an error.
+            if (analytics.invoked) {
+              if (window.console && console.error) {
+                console.error('Segment snippet included twice.');
+              }
+              return;
+            }
+
+            // Invoked flag, to make sure the snippet
+            // is never invoked twice.
+            analytics.invoked = true;
+
+            // A list of the methods in Analytics.js to stub.
+            analytics.methods = [
+              'trackSubmit',
+              'trackClick',
+              'trackLink',
+              'trackForm',
+              'pageview',
+              'identify',
+              'group',
+              'track',
+              'ready',
+              'alias',
+              'page',
+              'once',
+              'off',
+              'on'
+            ];
+
+            // Define a factory to create stubs. These are placeholders
+            // for methods in Analytics.js so that you never have to wait
+            // for it to load to actually record data. The `method` is
+            // stored as the first argument, so we can replay the data.
+            analytics.factory = function(method){
+              return function(){
+                var args = Array.prototype.slice.call(arguments);
+                args.unshift(method);
+                analytics.push(args);
+                return analytics;
+              };
             };
 
-            // document.getElementById('tradebtn').addEventListener('click', function(e) {
-            //    analytics.track('Logged a Trade');
-            // });
+            // For each of our methods, generate a queueing stub.
+            for (var i = 0; i < analytics.methods.length; i++) {
+              var key = analytics.methods[i];
+              analytics[key] = analytics.factory(key);
+            }
 
-            var re = document.getElementById('reviewbtn');
-            if(re){
-                re.addEventListener('click', function(e) {
-                    analytics.track('Reviewed a Trade');
-                });
+            // Define a method to load Analytics.js from our CDN,
+            // and that will be sure to only ever load it once.
+            analytics.load = function(key){
+              // Create an async script element based on your key.
+              var script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.async = true;
+              script.src = ('https:' === document.location.protocol ? 'https://' : 'http://') + 'cdn.segment.com/analytics.js/v1/' + key + '/analytics.min.js';
+
+              // Insert our script next to the first script element.
+              var first = document.getElementsByTagName('script')[0];
+              first.parentNode.insertBefore(script, first);
             };
 
-            // document.getElementById('reviewbtn').addEventListener('click', function(e) {
-            //    analytics.track('Reviewed a Trade');
-            // });
+            // Add a version to keep track of what's in the wild.
+            analytics.SNIPPET_VERSION = '3.0.1';
 
-            var reg = document.getElementById('registerbtn');
-            if(reg){
-                reg.addEventListener('click', function(e) {
-                    analytics.track('Registered for 14 Day Trial');
-                });
-            };
+            // Load Analytics.js with your key, which will automatically
+            // load the tools you've enabled for your account. Boosh!
+            analytics.load("DixYUUZ4I9hz5wIBAAhk5wp1CxfjbC8l");
 
-            // document.getElementById('registerbtn').addEventListener('click', function(e) {
-            //    analytics.track('Registered for 14 Day Trial');
-            // });
+            // Make the first page call to load the integrations. If
+            // you'd like to manually name or tag the page, edit or
+            // move this call however you'd like.
+            analytics.page();
 
-            var login = document.getElementById('loginbtn');
-            if(login){
-                login.addEventListener('click', function(e) {
-                    analytics.track('Logged In');
-                });
-            };
+            // Identify the user
+            analytics.identify('#{@user_id}', {
+              created: '#{@created_at}',
+              subscribed: '#{@subscribed}',
+              email: '#{@email}'
+            }, {
+                integrations: {
+                    Intercom : {
+                        user_hash : '#{ OpenSSL::HMAC.hexdigest("sha256", "ENV[INTERCOMAPPSECRET]", "@user_id") }'
+                        }
+                    }
+            });
 
-            //document.getElementById('loginbtn').addEventListener('click', function(e) {
-            //    analytics.track('Registered for 14 Day Trial');
-            //});
+
+            // Track actions
+
+            // Logged a trade
+
+
+
+
+            })();
+
+    %body
+        %nav.navbar.navbar-default
+            .container
+                .navbar-brand= link_to "tradejournal", root_path
+                - if user_signed_in?
+                    %ul.nav.navbar-nav.navbar-right
+                        %li= link_to "Dashboard", trades_path
+                        %li= link_to "Review", review_index_path, id: "reviewnavbtn"
+                        %li= link_to "Account", edit_user_registration_path
+                        %li= link_to "Log out", destroy_user_session_path, method: :delete
+                - else
+                    %ul.nav.navbar-nav.navbar-right
+                        %li= link_to "Start Your Free Trial",  new_user_registration_path, class: "navcta"
+                        %li= link_to "Login",  new_user_session_path
+        .container
+
+            = yield
+
+        .footer
+            :javascript
+                var tr = document.getElementById('tradebtn');
+                if(tr){
+                    tr.addEventListener('click', function(e) {
+                        analytics.track('Logged a Trade');
+                    });
+                };
+
+                // document.getElementById('tradebtn').addEventListener('click', function(e) {
+                //    analytics.track('Logged a Trade');
+                // });
+
+                var re = document.getElementById('reviewbtn');
+                if(re){
+                    re.addEventListener('click', function(e) {
+                        analytics.track('Reviewed a Trade');
+                    });
+                };
+
+                // document.getElementById('reviewbtn').addEventListener('click', function(e) {
+                //    analytics.track('Reviewed a Trade');
+                // });
+
+                var reg = document.getElementById('registerbtn');
+                if(reg){
+                    reg.addEventListener('click', function(e) {
+                        analytics.track('Registered for 14 Day Trial');
+                    });
+                };
+
+                // document.getElementById('registerbtn').addEventListener('click', function(e) {
+                //    analytics.track('Registered for 14 Day Trial');
+                // });
+
+                var login = document.getElementById('loginbtn');
+                if(login){
+                    login.addEventListener('click', function(e) {
+                        analytics.track('Logged In');
+                    });
+                };
+
+                //document.getElementById('loginbtn').addEventListener('click', function(e) {
+                //    analytics.track('Registered for 14 Day Trial');
+                //});
