@@ -128,7 +128,7 @@
                         %li= link_to "Log out", destroy_user_session_path, method: :delete
                 - else
                     %ul.nav.navbar-nav.navbar-right
-                        %li= link_to "Start Your Free Trial",  new_user_registration_path, class: "navcta"
+                        %li= link_to "Start Your Free Trial",  new_user_registration_path, id: "navcta"
                         %li= link_to "Login",  new_user_session_path
         .container
 

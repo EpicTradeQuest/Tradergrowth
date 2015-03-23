@@ -18,11 +18,7 @@
 @import "bootstrap";
 
 body {
-    color: #314046;
-}
-
-body {
-    background: #E9E9E9;
+  background-color: #f0f0f0;
 }
 
 nav {
@@ -199,4 +195,9 @@ textarea {
 
 .showtags {
   text-align: center;
+}
+
+#navcta {
+  text-decoration: underline;
+  color: #D9534F;
 }
