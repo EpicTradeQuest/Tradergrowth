@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :unit
   helper_method :trial_expired?
 
-
+  # Define the unit the user wants to use to record their trades.
   def unit
     unitchoice = current_user.trade_unit
     if unitchoice == 1
@@ -25,10 +25,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Set trial length.
   def remaining_days
-   ((current_user.created_at + 14.days).to_date - Date.today).round
+   ((current_user.created_at + 30.days).to_date - Date.today).round
   end
 
+  # If trial length is expired, this triggers the change of form on the index.html.haml on the dashboard.
   def trial_expired?
     remaining_days <= 0
   end
