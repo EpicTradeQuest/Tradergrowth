@@ -14,3 +14,27 @@
       = f.input :tag_list, input_html: { placeholder: 'Seperate with commas', class: 'form-control'  }, label: false
 
     = f.button :submit, "Log Trade", class: "btn btn-danger", id: "tradebtn"
+
+    #detailformbtn
+      %a.btn{ data: {toggle: "collapse", target: "#detailform" }}
+        More detail
+
+  .form-inline.form_box.collapse#detailform
+    .row
+      .col-md-4
+        .form-group
+          = f.label "Entry Price"
+          = f.input :entry, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+          = f.label "Stop Loss Price"
+          = f.input :stoploss, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+      .col-md-4
+        .form-group
+          = f.label "Target 1"
+          = f.input :targetone, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+          = f.label "Target 2"
+          = f.input :targettwo, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+          = f.label "Target 3"
+          = f.input :targetthree, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+      .col-md-4
+        = f.label "Trade Notes"
+        = f.input :description, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
