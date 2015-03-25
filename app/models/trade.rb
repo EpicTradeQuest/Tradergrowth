@@ -9,7 +9,7 @@ class Trade < ActiveRecord::Base
     :fog_credentials => {:provider => "AWS",
                                     aws_access_key_id: ENV['aws_access_key_id'],aws_secret_access_key: ENV['aws_secret_access_key'] },
     :fog_directory => 'tradejournal',
-    :styles => { :large => "800x800>", :medium => "400x400>" },
+    :styles => { :medium => "400x400>" },
     :default_url => ":style/missing.png"
 
     # Form validations for trade submission form

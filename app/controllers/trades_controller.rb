@@ -50,6 +50,6 @@ class TradesController < ApplicationController
     end
 
     def trade_params
-      params.require(:trade).permit(:result, :description, :tag_list, :screenshot)
+      params.require(:trade).permit(:result, :description, :tag_list, :screenshot, :entry, :stoploss, :targetone, :targettwo, :targetthree)
     end
 end

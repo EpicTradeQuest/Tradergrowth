@@ -12,4 +12,18 @@
     .form-group
       = f.input :tag_list, input_html: { class: 'form-control', value: @trade.tag_list.to_s }
 
+    .form-group
+      = f.label "Entry Price"
+      = f.input :entry, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number' }, label: false
+      = f.label "Stop Loss Price"
+      = f.input :stoploss, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number'  }, label: false
+
+    .form-group
+      = f.label "Target 1"
+      = f.input :targetone, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number'  }, label: false
+      = f.label "Target 2"
+      = f.input :targettwo, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number'  }, label: false
+      = f.label "Target 3"
+      = f.input :targetthree, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number'  }, label: false
+
     = f.button :submit, class: "btn btn-danger", method: :update
