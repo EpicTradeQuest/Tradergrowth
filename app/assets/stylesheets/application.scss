@@ -17,15 +17,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+* { -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important; border-radius: 0 !important; }
+
 body {
-  background-color: #f0f0f0;
+  background-color: #E7EBEE;
 }
 
 nav {
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    box-shadow:  0px 2px 0px -1px rgba(0, 0, 0, 0.05);
     .navbar-brand {
         a {
-            color: #BD1E23;
+            color: #FFF;
             font-weight: bold;
             &:hover {
                 text-decoration: none;
@@ -34,11 +36,24 @@ nav {
     }
 }
 
+.navbar-default .navbar-nav > li > a {
+  color: #ADB3B8;
+}
+
+.specnav {
+    background-color: #32404E;
+    li {
+      :hover {
+        color: white !important;
+      }
+    }
+}
+
 .form_box {
     margin: 20px auto;
     padding: 10px;
     width: 100%;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.05);
     border-radius: 7px;
     text-align: center;
     background-color: white;
@@ -50,12 +65,17 @@ nav {
     }
 }
 
+.navbar-default {
+  border: none;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
+}
+
 .stat_box {
     margin: 20px auto;
     padding: 10px;
     width: 100%;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
-    border-radius: 7px;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.05);
     background-color: white;
     h1 {
         text-align: center;
@@ -75,8 +95,7 @@ nav {
       padding: 10px;
       margin: 10px;
       width: 350px;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-      border-radius: 7px;
+      box-shadow: 0 2px 0 rgba(0,0,0,0.05);
       text-align: center;
       img {
         max-width: 100%;

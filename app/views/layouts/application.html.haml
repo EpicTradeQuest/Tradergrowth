@@ -117,11 +117,11 @@
             })();
 
     %body
-        %nav.navbar.navbar-default
+        %nav.navbar.navbar-default.specnav
             .container
                 .navbar-brand= link_to "tradejournal", root_path
                 - if user_signed_in?
-                    %ul.nav.navbar-nav.navbar-right
+                    %ul.nav.navbar-nav.navbar-right#tjnav
                         %li
                             = link_to trades_path do
                                 %span.glyphicon.glyphicon-th
