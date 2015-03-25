@@ -95,6 +95,8 @@ GEM
     erubis (2.7.0)
     excon (0.44.3)
     execjs (2.3.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
     figaro (1.1.0)
       thor (~> 0.14)
     fission (0.5.0)
@@ -346,6 +348,7 @@ DEPENDENCIES
   chartkick
   coffee-rails (~> 4.1.0)
   devise (~> 3.4.1)
+  factory_girl
   figaro
   fog
   groupdate
