@@ -22,7 +22,7 @@ class TradesController < ApplicationController
       flash[:success] = "Trade successfully logged."
       redirect_to action: 'index'
     else
-      flash[:warning] = "You can't submit an empty trade!"
+      flash[:alert] = "You can't submit an empty trade!"
       redirect_to action: 'index'
     end
   end
@@ -32,7 +32,7 @@ class TradesController < ApplicationController
       flash[:success]= 'Trade was successfully updated!'
       redirect_to action: 'index'
     else
-      flash[:warning]= 'Update unsuccessful'
+      flash[:alert]= 'Update unsuccessful'
       render :edit
     end
   end

@@ -122,10 +122,22 @@
                 .navbar-brand= link_to "tradejournal", root_path
                 - if user_signed_in?
                     %ul.nav.navbar-nav.navbar-right
-                        %li= link_to "Dashboard", trades_path
-                        %li= link_to "Review", review_index_path, id: "reviewnavbtn"
-                        %li= link_to "Account", edit_user_registration_path
-                        %li= link_to "Log out", destroy_user_session_path, method: :delete
+                        %li
+                            = link_to trades_path do
+                                %span.glyphicon.glyphicon-th
+                                Dashboard
+                        %li
+                            = link_to review_index_path do
+                                %span.glyphicon.glyphicon-signal
+                                Review
+                        %li
+                            = link_to edit_user_registration_path do
+                                %span.glyphicon.glyphicon-cog
+                                Account
+                        %li
+                            = link_to destroy_user_session_path, method: :delete do
+                                %span.glyphicon.glyphicon-menu-right
+                                Log Out
                 - else
                     %ul.nav.navbar-nav.navbar-right
                         %li= link_to "Start Your Free Trial",  new_user_registration_path, id: "navcta"

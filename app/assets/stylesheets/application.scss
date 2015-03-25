@@ -179,8 +179,10 @@ textarea {
   margin:auto;
 }
 
-.panel-body p{
+.panel-body {
+  p {
   color:#555;
+  }
 }
 
 .form-actions {
@@ -200,4 +202,13 @@ textarea {
 #navcta {
   text-decoration: underline;
   color: #D9534F;
+}
+
+#primarytradeform {
+    input {
+        margin-left: 10px;
+    }
+    #tradebtn {
+        margin-top: 58px;
+    }
 }

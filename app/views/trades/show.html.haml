@@ -14,9 +14,10 @@
                 .showtags
                     - @trade.tags.each do |tag|
                         %p= link_to tag
-            .panel-footer
+            .panel-footer.text-center
                 .row
                     .col-md-12
-                        = link_to 'Back', :back, class: "btn btn-default"
-                        = link_to 'Edit', edit_trade_path(@trade), class: "btn btn-default"
-                        = link_to 'Delete', trade_path, method: :Delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
+                        .btn-group
+                            = link_to 'Back', :back, class: "btn btn-default"
+                            = link_to 'Edit', edit_trade_path(@trade), class: "btn btn-default"
+                            = link_to 'Delete', trade_path, method: :Delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger"

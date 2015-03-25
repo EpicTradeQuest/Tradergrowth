@@ -1,5 +1,5 @@
-= simple_form_for @trade, html: { multipart: true, id: "trade-form" } do |f|
-  .form-inline.form_box
+= simple_form_for @trade, html: { multipart: true, id: "trade-form", data: { toggle: "validator"} } do |f|
+  .form-inline.form_box#primarytradeform
     %h2 Log a Trade
     .form-group
       = f.label "Upload Screenshot"
@@ -7,7 +7,7 @@
 
     .form-group
       = f.label "Trade result"
-      = f.input :result, input_html: { placeholder: unit, class: 'form-control' }, label: false
+      = f.input :result, input_html: { placeholder: unit, class: 'form-control', type: 'number' }, label: false
 
     .form-group
       = f.label "Tags"
@@ -15,26 +15,27 @@
 
     = f.button :submit, "Log Trade", class: "btn btn-danger", id: "tradebtn"
 
-    #detailformbtn
-      %a.btn{ data: {toggle: "collapse", target: "#detailform" }}
+    .row
+      %a.btn.btn-link.btn-xs{ data: { toggle: "collapse", target: "#detailform" }, id: "detailformbtn" }
         More detail
+        %span.glyphicon.glyphicon-menu-down
 
   .form-inline.form_box.collapse#detailform
     .row
       .col-md-4
         .form-group
           = f.label "Entry Price"
-          = f.input :entry, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+          = f.input :entry, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number' }, label: false
           = f.label "Stop Loss Price"
-          = f.input :stoploss, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+          = f.input :stoploss, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number'  }, label: false
       .col-md-4
         .form-group
           = f.label "Target 1"
-          = f.input :targetone, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+          = f.input :targetone, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number'  }, label: false
           = f.label "Target 2"
-          = f.input :targettwo, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+          = f.input :targettwo, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number'  }, label: false
           = f.label "Target 3"
-          = f.input :targetthree, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+          = f.input :targetthree, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number'  }, label: false
       .col-md-4
         = f.label "Trade Notes"
         = f.input :description, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false

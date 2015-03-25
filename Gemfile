@@ -40,6 +40,8 @@ group :development, :test do
 
   gem 'capybara'
 
+  gem 'factory_girl'
+
 end
 
 group :production do
