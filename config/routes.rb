@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   get "privacy", to: "static_pages#privacy", as: :privacy
   get "tos", to: "static_pages#tos", as: :tos
+
+  mount StripeEvent::Engine, at: '/stripehooks'
 end
