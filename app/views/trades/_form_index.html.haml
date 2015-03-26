@@ -37,5 +37,6 @@
           = f.label "Target 3"
           = f.input :targetthree, input_html: { placeholder: 'Optional', class: 'form-control', type: 'number'  }, label: false
       .col-md-4
-        = f.label "Trade Notes"
-        = f.input :description, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false
+        .form-group
+          = f.label "Trade Notes"
+          = f.input :description, input_html: { placeholder: 'Optional', class: 'form-control' }, label: false

@@ -6,6 +6,6 @@
       %small=  trade.created_at.strftime("%d %b. %Y")
       %h2= "#{trade.result} " + unit
       %p= "Tags: #{trade.tag_list}"
-      = link_to ("edit"), edit_trade_path(trade)
+      = link_to ("edit"), edit_trade_path(trade), id: "edittradenav"
       |
       = link_to 'delete', trade_path(trade), method: :Delete, data: { confirm: "Are you sure you want to delete this trade?"}
