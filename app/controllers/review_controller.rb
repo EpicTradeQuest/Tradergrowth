@@ -4,15 +4,16 @@ class ReviewController < ApplicationController
     def index
         if params[:query] == ''
             @sum = 0
-            @trades = current_user.trades.all
+            @alltrades = current_user.trades
+            @trades = Kaminari.paginate_array(current_user.trades.order("created_at desc")).page(params[:page]).per(9)
             # @daterange = @trades.created_between(:startdate, :enddate)
             @tags = 'ALL'
-            @tradenumber = @trades.count
-            @pipresult = @trades.sum :result
-            @average = @trades.average(:result).round(1)
-            @winrate = ((@trades.where('result > 0').count.to_f / @trades.count.to_f) * 100).round(1)
-            @largestwin = @trades.maximum :result
-            @largestloss = @trades.minimum :result
+            @tradenumber = @alltrades.count
+            @pipresult = @alltrades.sum :result
+            @average = @alltrades.average(:result).round(1)
+            @winrate = ((@alltrades.where('result > 0').count.to_f / @alltrades.count.to_f) * 100).round(1)
+            @largestwin = @alltrades.maximum :result
+            @largestloss = @alltrades.minimum :result
 
         elsif params[:query].present?
                 unless current_user.trades.tagged_with(params[:query]).exists?
@@ -20,15 +21,16 @@ class ReviewController < ApplicationController
                     render 'index'
                 else
                     @sum = 0
-                    @trades = current_user.trades.tagged_with(params[:query])
+                    @alltrades = current_user.trades.tagged_with(params[:query])
+                    @trades = Kaminari.paginate_array(current_user.trades.tagged_with(params[:query]).order("created_at desc")).page(params[:page]).per(9)
                     # @daterange = @trades.created_between(:startdate, :enddate)
                     @tags = params[:query]
-                    @tradenumber = @trades.count
-                    @pipresult = @trades.sum :result
-                    @average = @trades.average(:result).round(1)
-                    @winrate = ((@trades.where('result > 0').count.to_f / @trades.count.to_f) * 100).round(1)
-                    @largestwin = @trades.maximum :result
-                    @largestloss = @trades.minimum :result
+                    @tradenumber = @alltrades.count
+                    @pipresult = @alltrades.sum :result
+                    @average = @alltrades.average(:result).round(1)
+                    @winrate = ((@alltrades.where('result > 0').count.to_f / @alltrades.count.to_f) * 100).round(1)
+                    @largestwin = @alltrades.maximum :result
+                    @largestloss = @alltrades.minimum :result
                 end
         else
             @trades = current_user.trades.all

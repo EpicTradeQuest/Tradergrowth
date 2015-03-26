@@ -5,8 +5,9 @@ class TradesController < ApplicationController
 
   def index
     @trade = current_user.trades.build
-    @trades = current_user.trades.all
+    @trades = Kaminari.paginate_array(current_user.trades.order("created_at desc")).page(params[:page]).per(9)
     @subscribed = current_user.subscribed
+    # @paginatable_array = Kaminari.paginate_array(my_array_object).page(params[:page]).per(10)
   end
 
   def show

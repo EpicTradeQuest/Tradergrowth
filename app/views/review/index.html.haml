@@ -11,3 +11,5 @@
 - if (params[:query].present? && current_user.trades.tagged_with(params[:query]).exists?) || params[:query] == ""
     = render "statistics"
     = render "show_trades"
+    .text-center
+        = paginate @trades
