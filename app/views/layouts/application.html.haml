@@ -122,15 +122,15 @@
                 .navbar-brand= link_to "tradejournal", root_path
                 - if user_signed_in?
                     %ul.nav.navbar-nav.navbar-right#tjnav
-                        %li
+                        %li{class: current_page?(trades_path) && 'active'}
                             = link_to trades_path do
                                 %span.glyphicon.glyphicon-th
                                 Dashboard
-                        %li
+                        %li{class: current_page?(review_index_path) && 'active'}
                             = link_to review_index_path do
                                 %span.glyphicon.glyphicon-signal
                                 Review
-                        %li
+                        %li{class: current_page?(edit_user_registration_path) && 'active'}
                             = link_to edit_user_registration_path do
                                 %span.glyphicon.glyphicon-cog
                                 Account
@@ -155,20 +155,12 @@
                     });
                 };
 
-                // document.getElementById('tradebtn').addEventListener('click', function(e) {
-                //    analytics.track('Logged a Trade');
-                // });
-
                 var re = document.getElementById('reviewbtn');
                 if(re){
                     re.addEventListener('click', function(e) {
                         analytics.track('Reviewed a Trade');
                     });
                 };
-
-                // document.getElementById('reviewbtn').addEventListener('click', function(e) {
-                //    analytics.track('Reviewed a Trade');
-                // });
 
                 var reg = document.getElementById('registerbtn');
                 if(reg){
@@ -177,17 +169,9 @@
                     });
                 };
 
-                // document.getElementById('registerbtn').addEventListener('click', function(e) {
-                //    analytics.track('Registered for 14 Day Trial');
-                // });
-
                 var login = document.getElementById('loginbtn');
                 if(login){
                     login.addEventListener('click', function(e) {
                         analytics.track('Logged In');
                     });
                 };
-
-                //document.getElementById('loginbtn').addEventListener('click', function(e) {
-                //    analytics.track('Registered for 14 Day Trial');
-                //});
