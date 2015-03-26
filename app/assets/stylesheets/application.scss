@@ -185,7 +185,6 @@ textarea {
 
 .log-in{
   width: 500px;
-  margin:auto;
   text-align:center;
   padding-top:40px;
   font-family: 'Roboto', Arial, sans-serif;
@@ -199,9 +198,14 @@ textarea {
 }
 
 .form-control{
-  width: 500px;
   text-align: center;
-  margin:auto;
+}
+
+.form-horizontal {
+    .form-group {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
 }
 
 .panel-body {
