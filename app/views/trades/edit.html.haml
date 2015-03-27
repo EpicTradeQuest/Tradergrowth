@@ -3,7 +3,7 @@
         .panel.panel-default
             .panel-heading.pin_image
                 %h1 Edit Trade
-                = image_tag @trade.screenshot.url(:large)
+                = image_tag @trade.screenshot.url
             .panel-body
                 .form-actions
                     = render 'form'
