@@ -28,9 +28,7 @@ class ChargesController < ApplicationController
     def destroy
       if current_user.subscribed
         customer = Stripe::Customer.retrieve(current_user.stripeid)
-        customer.subscriptions.first.delete()
-        # current_user.subscribed = false
-        # current_user.save
+        customer.subscriptions.first.delete(:at_period_end => true)
         flash[:success] = "Your subscription has been cancelled, we'll miss you."
         redirect_to trades_path
       else

@@ -19,9 +19,10 @@ StripeEvent.configure do |events|
     head 200
   end
 
+
   events.subscribe 'invoice.payment_failed' do |event|
-    subscriber = User.stripeid.find(event.data.object.customer)
-    subscriber.update_attribute(:subscribed, false)
+    #subscriber = User.stripeid.find(event.data.object.customer)
+    #subscriber.update_attribute(:subscribed, false)
     head 200
   end
 end

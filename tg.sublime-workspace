@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"padding-",
+				"padding-bottom"
+			],
+			[
+				"edi",
+				"edit_user_registration_path"
+			],
+			[
+				"creat",
+				"created_at"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"border-bottom",
+				"border-bottom-style"
+			],
+			[
 				"backgr",
 				"background-color"
 			],
@@ -31,51 +55,16 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/trades/index.html.haml",
-			"settings":
-			{
-				"buffer_size": 204,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/trades/_trial_expired.html.haml",
-			"settings":
-			{
-				"buffer_size": 173,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/layouts/application.html.haml",
-			"settings":
-			{
-				"buffer_size": 1015,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/trades_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1617,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/charges/new.html.haml",
-			"settings":
-			{
-				"buffer_size": 344,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 368.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -126,82 +115,122 @@
 	[
 		"/Users/ben/Desktop/dev/tradergrowth",
 		"/Users/ben/Desktop/dev/tradergrowth/app",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts",
+		"/Users/ben/Desktop/dev/tradergrowth/app/controllers",
 		"/Users/ben/Desktop/dev/tradergrowth/app/views",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/charges",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/layouts",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/review",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades",
-		"/Users/ben/Desktop/dev/tradergrowth/db/migrate"
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades"
 	],
 	"file_history":
 	[
-		"/Users/ben/Desktop/dev/tradergrowth/app/models/trade.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/charges_controller.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/config/initializers/stripe.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/edit.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/show.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/config/routes.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/trades_controller.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/charges_controller.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/mailer/reset_password_instructions.html.erb",
+		"/Users/ben/Desktop/dev/tradergrowth/config/secrets.yml",
+		"/Users/ben/Desktop/dev/tradergrowth/config/initializers/devise.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/config/environments/development.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/Gemfile",
+		"/Users/ben/Desktop/dev/tradergrowth/app/helpers/application_helper.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/layouts/application.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/application.scss",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/registrations/new.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/sessions/new.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/registrations/edit.html.erb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_form_index.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_form.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/scaffolds.scss",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/static_pages.scss",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/kaminari/_paginator.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/_statistics.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/index.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/_show_trades.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_show_trades.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/review_controller.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/index.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/config/initializers/kaminari_config.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/application.js",
+		"/Users/ben/Desktop/dev/tradergrowth/vendor/assets/javascripts/jquery.infinitescroll.js",
+		"/Users/ben/Desktop/dev/tradergrowth/app/models/trade.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/sessions/new.html.erb",
+		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150324030925_add_extra_fields_to_trades.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/images/original/missing.png",
+		"/Users/ben/Desktop/dev/tradergrowth/public/assets/video-cc141a672fe6606da3a56439fc1687c1.gif",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/index.json.jbuilder",
+		"/Users/ben/Desktop/dev/nifty.css",
+		"/Users/ben/Desktop/dev/tradergrowth/app/models/user.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/public/500.html",
+		"/Users/ben/Desktop/dev/tradergrowth/vendor/assets/stylesheets/bootplus.css",
+		"/Users/ben/Desktop/dev/tradergrowth/public/404.html",
+		"/Users/ben/Desktop/dev/tradergrowth/vendor/assets/stylesheets/bootplus-responsive.css",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/trades.scss",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/validator.js",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/charges.coffee",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/trades.coffee",
+		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150309093145_add_extra_details_to_user.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150306112255_change_resultin_trades.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/static_pages/index.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/application_controller.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/registrations/new.html.erb",
+		"/Users/ben/Desktop/dev/tradergrowth/public/assets/favicon-ca79976d24aadcdbaacb785c75b63844.ico",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/show.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/charges.scss",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/charges/new.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/.gitignore",
+		"/Users/ben/Desktop/dev/tradergrowth/config/application.yml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_trial_expired.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/config/locales/devise.en.yml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/segmentio.js",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/analytics.js.erb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/charges/create.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/static_pages_controller.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/static_pages/privacy.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/analytics.js",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/static_pages/tos.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/config/puma.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/config/environments/production.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/Procfile",
+		"/Users/ben/Desktop/dev/tradergrowth/config/environment.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/tags_controller.scss",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/reviews.scss",
+		"/Users/ben/Desktop/dev/Freelancer - Start Bootstrap Theme.html",
+		"/Users/ben/Desktop/dev/test.css",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/jquery.form.js",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/require.js",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/tags_controller.coffee",
+		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/static_pages.coffee",
+		"/Volumes/Bens Drive/index.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/passwords/new.html.erb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/passwords/edit.html.erb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/helpers/charges_helper.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/helpers/reviews_helper.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/mailer/confirmation_instructions.html.erb",
+		"/Users/ben/Desktop/dev/tradergrowth/app/stripe_handlers/charge_succeeded.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/config/initializers/stripe_event.rb",
+		"/Users/ben/Desktop/dev/tradergrowth/log/development.log",
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/layouts/charges.html.haml",
+		"/Users/ben/Desktop/dev/tradergrowth/config.ru",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150305102545_add_trade_unit_to_users.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150306112034_change_trade_unitin_users.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/test/models/trade_test.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/tmp/cache/assets/development/sass/61f101c4674d8d3ae0003b92a82b71b0e04cbd54/_table-row.scssc",
 		"/Users/ben/Desktop/dev/tradergrowth/tg.sublime-project",
-		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/application_controller.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/config/application.yml",
-		"/Users/ben/Desktop/dev/tradergrowth/config/routes.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/Rakefile",
-		"/Users/ben/Desktop/dev/tradergrowth/app/controllers/review_controller.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/config/secrets.yml",
-		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150309093145_add_extra_details_to_user.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/index.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_trial_expired.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_form_index.html.haml",
 		"/Users/ben/Desktop/dev/tradergrowth/config/application.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/config/environment.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/config/database.yml",
-		"/Users/ben/Desktop/dev/tradergrowth/config.ru",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150220114749_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150220114750_add_missing_unique_indices.acts_as_taggable_on_engine.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150220114751_add_taggings_counter_cache_to_tags.acts_as_taggable_on_engine.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150220114752_add_missing_taggable_index.acts_as_taggable_on_engine.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150221003956_add_attachment_screenshot_to_trades.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150301111346_add_user_id_to_trades.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150306112255_change_resultin_trades.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/Gemfile",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/_statistics.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_show_trades.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/layouts/charges.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/charges/create.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/application.js",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/charges/new.html.haml",
 		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/new.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/layouts/application.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/index.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/_show_trades.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/review/show.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/show.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/edit.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_form.html.haml",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/registrations/new.html.erb",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150305_change_trade_unit_from_float_to_integer.rb",
 		"/Users/ben/Desktop/dev/tradergrowth/db/migrate/20150301110822_devise_create_users.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/application.scss",
-		"/Users/ben/Desktop/dev/tradergrowth/app/models/user.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/config/environments/development.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/config/environments/production.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/.gitignore",
 		"/Users/ben/Desktop/dev/tradergrowth/Gemfile.lock",
-		"/Users/ben/Desktop/dev/tradergrowth/app/helpers/application_helper.rb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/sessions/new.html.erb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/mailer/confirmation_instructions.html.erb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/devise/passwords/new.html.erb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/trades.coffee",
-		"/Users/ben/Desktop/dev/tradergrowth/vendor/assets/stylesheets/bootplus.css",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/validator.js",
 		"/Users/ben/Downloads/jquery-validation-1.13.1/lib/require.js",
 		"/Users/ben/Downloads/jquery-validation-1.13.1/lib/jquery.form.js",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/scaffolds.scss",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/tags_controller.scss",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/trades.scss",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/javascripts/review.coffee",
 		"/Users/ben/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/ben/Desktop/dev/tradergrowth/app/views/tags/show.html.haml",
@@ -219,31 +248,7 @@
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/images/large/missing.png",
 		"/Users/ben/Desktop/dev/tradergrowth/app/assets/images/.keep",
 		"/Users/ben/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/tags/show.html.erb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/index.html.erb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/_form.html.erb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/assets/stylesheets/application.css",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/new.html.erb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/acts_as_taggable_on/tags/_tag.html.erb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/trades/show.html.erb",
-		"/Users/ben/Desktop/dev/tradergrowth/app/views/tags/_tag.html.erb",
-		"/Users/ben/Desktop/Railstuts/blog/app/models/comment.rb",
-		"/Users/ben/Desktop/Railstuts/blog/config/routes.rb",
-		"/Users/ben/Desktop/Railstuts/blog/app/views/articles/show.html.erb",
-		"/Users/ben/Desktop/Railstuts/blog/app/views/articles/edit.html.erb",
-		"/Users/ben/Desktop/Railstuts/blog/app/views/articles/index.html.erb",
-		"/Users/ben/Desktop/Railstuts/blog/app/views/articles/new.html.erb",
-		"/Users/ben/Desktop/Railstuts/blog/app/models/article.rb",
-		"/Users/ben/Desktop/Railstuts/blog/db/migrate/20150207013943_create_articles.rb",
-		"/Users/ben/Desktop/Railstuts/blog/app/views/welcome/index.html.erb",
-		"/Users/ben/Downloads/EmberCourseDemo-master/public/demo/ember-data.js",
-		"/Users/ben/Downloads/EmberCourseDemo-master/public/demo/ember-1.0.0.js",
-		"/Users/ben/Downloads/EmberCourseDemo-master/public/demo/app.js",
-		"/Users/ben/Downloads/EmberCourseDemo-master/app/assets/javascripts/application.js",
-		"/Users/ben/Downloads/EmberCourseDemo-master/app/models/example.rb",
-		"/Users/ben/Downloads/EmberCourseDemo-master/app/views/products/index.json",
-		"/Users/ben/Downloads/EmberCourseDemo-master/app/views/templates/_index.html.erb",
-		"/Users/ben/Documents/Tutorials/Emberjs/js/libs/ember-1.9.1.js"
+		"/Users/ben/Desktop/dev/tradergrowth/app/views/tags/show.html.erb"
 	],
 	"find":
 	{
@@ -262,6 +267,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"navbar-default",
+			"777",
+			"nav",
+			"navbar",
+			"#ADB3B8;",
+			"border-radius: 4px",
+			"4px",
+			"navbar",
+			"radius",
+			"time",
+			"user",
+			"tradervue",
+			"tradejournal",
+			"tradervue",
+			"333",
+			"25",
+			"journalling",
+			"@resource",
+			"cancel",
+			"]",
 			"aws_access_key",
 			"= render 'show_trades'",
 			"else",
@@ -289,451 +314,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/views/trades/index.html.haml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 204,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								151,
-								151
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/trades/_trial_expired.html.haml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 173,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								173,
-								173
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/layouts/application.html.haml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1015,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								298,
-								298
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/trades_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1617,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								319,
-								319
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/charges/new.html.haml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 344,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								341,
-								341
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -768,10 +350,15 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 104.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "",
 	"project": "tg.sublime-project",
 	"replace":
 	{
@@ -781,19 +368,44 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"trade_",
-				"app/controllers/trades_controller.rb"
+				"mailer",
+				"app/views/devise/mailer/reset_password_instructions.html.erb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"routes",
+				"config/routes.rb"
 			],
 			[
 				"route",
 				"config/routes.rb"
 			],
 			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
 				"gemfi",
 				"Gemfile"
+			],
+			[
+				"charges_",
+				"app/controllers/charges_controller.rb"
+			],
+			[
+				"trade_",
+				"app/controllers/trades_controller.rb"
 			]
 		],
 		"width": 0.0
@@ -801,6 +413,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -809,6 +422,7 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -822,7 +436,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 261.0,
+	"side_bar_width": 234.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
