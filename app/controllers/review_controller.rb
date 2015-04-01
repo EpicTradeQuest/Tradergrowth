@@ -9,11 +9,11 @@ class ReviewController < ApplicationController
             # @daterange = @trades.created_between(:startdate, :enddate)
             @tags = 'ALL'
             @tradenumber = @alltrades.count
-            @pipresult = @alltrades.sum :result
+            @pipresult = @alltrades.sum(:result).round(2)
             @average = @alltrades.average(:result).round(1)
             @winrate = ((@alltrades.where('result > 0').count.to_f / @alltrades.count.to_f) * 100).round(1)
-            @largestwin = @alltrades.maximum :result
-            @largestloss = @alltrades.minimum :result
+            @largestwin = @alltrades.maximum(:result).round(2)
+            @largestloss = @alltrades.minimum(:result).round(2)
 
         elsif params[:query].present?
                 unless current_user.trades.tagged_with(params[:query]).exists?
@@ -26,11 +26,11 @@ class ReviewController < ApplicationController
                     # @daterange = @trades.created_between(:startdate, :enddate)
                     @tags = params[:query]
                     @tradenumber = @alltrades.count
-                    @pipresult = @alltrades.sum :result
+                    @pipresult = @alltrades.sum(:result).round(2)
                     @average = @alltrades.average(:result).round(1)
                     @winrate = ((@alltrades.where('result > 0').count.to_f / @alltrades.count.to_f) * 100).round(1)
-                    @largestwin = @alltrades.maximum :result
-                    @largestloss = @alltrades.minimum :result
+                    @largestwin = @alltrades.maximum(:result).round(2)
+                    @largestloss = @alltrades.minimum(:result).round(2)
                 end
         else
             @trades = current_user.trades.all
