@@ -7,6 +7,11 @@ module ReviewsHelper
     end
   end
 
+  def statistics_chart trades
+    sum = 0
+    trades.each_with_index.map { |t,i| [i+1, sum += t.result] }
+  end
+
   def total_pip_result trades
     trades.sum(:result).round(2)
   end

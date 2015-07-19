@@ -5,12 +5,11 @@
   .row.chart
     .col-md-8.col-md-offset-2
       %h1 #{ pluralize @alltrades.count, 'trade'}
-      = line_chart @alltrades.group_by_day("trades.created_at").order("day asc").sum(:result).map { |x,y| { x => (@sum += y)} }.reduce({}, :merge), {library: {hAxis: {title: "Date", format:'MMM d, y'}, vAxis: {title: unit}}}
+      = line_chart statistics_chart(@alltrades), discrete: true
   .row.stats
     .col-md-3.col-md-offset-3
       %p
-        %strong
-          Total #{ unit + ": " }
+        %strong Total #{ unit + ": " }
         = total_pip_result @alltrades
       %p
         %strong  Average result:
