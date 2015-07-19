@@ -17,23 +17,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-* { -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important; border-radius: 0 !important; }
 
 body {
   background-color: #E7EBEE;
 }
 
 nav {
-    box-shadow:  0px 2px 0px -1px rgba(0, 0, 0, 0.05);
-    .navbar-brand {
-        a {
-            color: #FFF;
-            font-weight: bold;
-            &:hover {
-                text-decoration: none;
-            }
-        }
+  box-shadow:  0px 2px 0px -1px rgba(0, 0, 0, 0.05);
+  .navbar-brand {
+    a {
+      color: #FFF;
+      font-weight: bold;
+      &:hover {
+        text-decoration: none;
+      }
     }
+  }
+}
+
+.navbar-default {
+  background-color: #32404E;
+  li {
+    :hover {
+      color: white !important;
+    }
+  }
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -42,17 +50,9 @@ nav {
     color: #F76C51;
   }
 }
-.navbar-default .navbar-nav > .active > a {
+.navbar-default > .active > a {
   color: #FFF;
   background-color: #32404E !important;
-}
-.specnav {
-    background-color: #32404E;
-    li {
-      :hover {
-        color: white !important;
-      }
-    }
 }
 
 .form_box {
@@ -69,12 +69,6 @@ nav {
     .btn {
         margin: 20px;
     }
-}
-
-.navbar-default {
-  border: none;
-  border-top-left-radius: none;
-  border-top-right-radius: none;
 }
 
 .stat_box {
