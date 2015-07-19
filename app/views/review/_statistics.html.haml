@@ -1,32 +1,30 @@
 .stat_box
-    .row
-        %h1 Results for tags: #{@tags}
-        %br
-    .row.chart
-        .col-md-8.col-md-offset-2
-            %h1 #{@tradenumber} trades
-            = line_chart @alltrades.group_by_day("trades.created_at").order("day asc").sum(:result).map { |x,y| { x => (@sum += y)} }.reduce({}, :merge), {library: {hAxis: {title: "Date", format:'MMM d, y'}, vAxis: {title: unit}}}
-    .row.stats
-        .col-md-3.col-md-offset-3
-            %p
-                %strong
-                    Total
-                    = unit + ": "
-                #{@pipresult}
-            %p
-                %strong  Average result:
-                #{@average}
-                = unit
-            %p
-                %strong  Winning percentage:
-                #{@winrate}%
-        .col-md-3
-            %p
-                %strong  Largest win:
-                #{@largestwin}
-                = unit
-            %p
-                %strong  Largest loss:
-                #{@largestloss}
-                = unit
-
+  .row
+    %h1 Results for tags: #{tag_list}
+    %br
+  .row.chart
+    .col-md-8.col-md-offset-2
+      %h1 #{ pluralize @alltrades.count, 'trade'}
+      = line_chart @alltrades.group_by_day("trades.created_at").order("day asc").sum(:result).map { |x,y| { x => (@sum += y)} }.reduce({}, :merge), {library: {hAxis: {title: "Date", format:'MMM d, y'}, vAxis: {title: unit}}}
+  .row.stats
+    .col-md-3.col-md-offset-3
+      %p
+        %strong
+          Total #{ unit + ": " }
+        = total_pip_result @alltrades
+      %p
+        %strong  Average result:
+        = average_pip_result @alltrades
+        = unit
+      %p
+        %strong  Winning percentage:
+        = win_rate @alltrades
+    .col-md-3
+      %p
+        %strong  Largest win:
+        = largest_win @alltrades
+        = unit
+      %p
+        %strong  Largest loss:
+        = largest_loss @alltrades
+        = unit
