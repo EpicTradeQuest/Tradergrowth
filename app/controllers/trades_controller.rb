@@ -1,7 +1,6 @@
 class TradesController < ApplicationController
   before_action :set_trade, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  before_filter :set_var
 
   def index
     @trade = current_user.trades.build

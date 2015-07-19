@@ -1,6 +1,5 @@
 class Trade < ActiveRecord::Base
     belongs_to :user
-
     acts_as_taggable
 
     # Attributes for paperclip images
@@ -21,5 +20,7 @@ class Trade < ActiveRecord::Base
     validates :targetone, length: { maximum: 8 }
     validates :targettwo, length: { maximum: 8 }
     validates :targetthree, length: { maximum: 8 }
+
+
 
 end
