@@ -24,6 +24,12 @@ module ReviewsHelper
     (trades.where('result > 0').count.to_f / trades.count.to_f * 100).round(1)
   end
 
+  def win_rate_chart trades
+    win_rate = win_rate trades
+    loss_rate = (100 - win_rate).round(1)
+    [['Wins', win_rate], ['Losses', loss_rate]]
+  end
+
   def largest_win trades
     trades.maximum(:result).round(2)
   end

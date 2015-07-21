@@ -2,10 +2,14 @@
   .row
     %h1 Results for tags: #{tag_list}
     %br
-  .row.chart
-    .col-md-8.col-md-offset-2
+  .row
+    .col-md-12.text-center
       %h1 #{ pluralize @alltrades.count, 'trade'}
+  .row.chart
+    .col-md-6
       = line_chart statistics_chart(@alltrades), discrete: true
+    .col-md-6
+      = pie_chart win_rate_chart(@alltrades)
   .row.stats
     .col-md-3.col-md-offset-3
       %p
